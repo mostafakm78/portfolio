@@ -1,9 +1,7 @@
-import { Pagination, EffectCards } from 'swiper/modules';
+import { EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
-
-import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
 import Image from 'next/image';
 
@@ -11,13 +9,10 @@ export default function SingleCard() {
   return (
     <>
       <Swiper
-        modules={[Pagination, EffectCards]}
+        modules={[EffectCards]}
         effect="cards"
         spaceBetween={50}
         slidesPerView={1}
-        pagination={{
-          clickable: true,
-        }}
         rewind={true}
         className="w-10/12"
       >

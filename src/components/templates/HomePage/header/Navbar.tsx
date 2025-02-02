@@ -45,52 +45,59 @@ export default function NavbarComponent() {
       shouldHideOnScroll={true}
       isBordered={true}
       maxWidth="xl"
-      className="bg-fore dark:bg-back p-3"
+      className="bg-fore shadow-md dark:bg-back p-3"
     >
       <NavbarContent>
         <Dropdown
-          className="bg-white/80 dark:bg-black/80 shadow-lg rounded-md"
+          className="bg-white/80 mr-20 dark:bg-black/80 shadow-lg rounded-md"
           backdrop="blur"
         >
           <DropdownTrigger>
-            <Button className="mt-2 text-2xl lg:hidden" variant="bordered">
+            <Button
+              className="mt-2 text-2xl bg-fore dark:bg-back lg:hidden"
+              variant="flat"
+            >
               {' '}
               <FaBars className="text-back dark:text-fore" />
             </Button>
           </DropdownTrigger>
-          <DropdownMenu aria-label="Static Actions" variant="faded">
-            <DropdownItem key="new">
+          <DropdownMenu
+            variant="faded"
+            className="py-4"
+            aria-label="Static Actions"
+          >
+            <DropdownItem key="home">
               <Link
-                className="text-foreground-50 text-back dark:text-fore text-xl mt-6"
+                className="cursor-pointer text-back dark:text-fore text-xl"
                 href="/"
               >
                 <IoMdHome className="ml-2 text-2xl" />
                 صفحه اصلی
               </Link>
             </DropdownItem>
-            <DropdownItem key="copy">
+            <DropdownItem key="about">
               {' '}
               <Link
-                className="text-foreground-50 cursor-pointer text-back dark:text-fore text-xl mt-6"
+                className="cursor-pointer text-back dark:text-fore text-xl"
                 onPress={scrollToAbout}
               >
                 <IoIosInformationCircleOutline className="ml-2 text-2xl" />
                 درباره من
               </Link>
             </DropdownItem>
-            <DropdownItem key="edit">
+            <DropdownItem key="contact">
               <Link
-                className="text-foreground-50 text-back dark:text-fore text-xl mt-6"
+                className=" text-back dark:text-fore text-xl "
                 onPress={scrollToContact}
               >
                 <GrContact className="ml-2" />
                 تماس با من
               </Link>
             </DropdownItem>
-            <DropdownItem key="delete" className="text-danger" color="danger">
+            <DropdownItem key="projects">
               <Link
-                className="text-foreground-50 pb-2 text-back dark:text-fore text-xl mt-6"
-                href="/"
+                className=" text-back dark:text-fore text-xl"
+                href="/more-projects"
               >
                 <PiBookmarkSimpleFill className="ml-2 text-2xl" />
                 نمونه کارها
@@ -99,9 +106,7 @@ export default function NavbarComponent() {
           </DropdownMenu>
         </Dropdown>
         <NavbarBrand>
-          <p className="text-foreground-50 text-back dark:text-fore text-2xl mt-2">
-            مصطفی کمری
-          </p>
+          <p className="text-back dark:text-fore text-2xl mt-2">مصطفی کمری</p>
         </NavbarBrand>
       </NavbarContent>
 
@@ -120,7 +125,7 @@ export default function NavbarComponent() {
         <NavbarItem>
           <Link
             className="text-foreground-50 hidden lg:block cursor-pointer text-back dark:text-fore text-2xl mt-2"
-            href="#"
+            href="/more-projects"
           >
             نمونه کارها
           </Link>
@@ -155,7 +160,7 @@ export default function NavbarComponent() {
               setIconTheme(!iconTheme);
               document.documentElement.classList.toggle('dark');
             }}
-            className="text-foreground-50 cursor-pointer hover:opacity-75 duration-200 text-back dark:text-fore text-2xl mt-2"
+            className="text-back cursor-pointer hover:opacity-75 duration-200  dark:text-fore text-2xl mt-2"
           >
             {iconTheme ? <FaSun /> : <FaMoon />}
           </span>

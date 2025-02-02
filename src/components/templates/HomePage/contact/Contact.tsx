@@ -1,3 +1,6 @@
+import FormContact from './Form';
+import MoreContact from './MoreContact';
+
 export default function Contact() {
   return (
     <div
@@ -12,11 +15,18 @@ export default function Contact() {
       </div>
       <div className="mt-10 mb-5 lg:mb-0 lg:w-8/12 w-full">
         <span className="text-back dark:text-fore">
-          تمام نمونه کارهای من به صورت پیش نمایش میتونین از اینجا ببینین و برای
-          سورس کد پروژه ها میتونین به لینک گیتهاب هر کدوم مراجعه کنین.
+          من دوست دارم از شما و پروژه هاتون بیشتر بدونم و باهم همکاری کنیم! شما
+          میتونین برای همکاری یا هرگونه سوالی با من در ارتباط باشین. در سریع
+          ترین حالت ممکن به شما پاسخ میدم.
         </span>
       </div>
-      <div className="mt-10 grid lg:grid-cols-2 grid-cols-1 lg:px-10 gap-8 justify-center items-center"></div>
+      <div className="mt-10 w-full grid lg:grid-cols-2 grid-cols-1 justify-center items-center mb-20 lg:px-10 gap-8">
+        <FormContact />
+        <MoreContact />
+      </div>
+      <div className='mb-16'>
+        <span className='opacity-60'>تمامی حقوق محفوظ است. استفاده بدون اجازه ممنوع</span>
+      </div>
     </div>
   );
 }

@@ -24,4 +24,5 @@ export default {
     },
   },
   darkMode: 'class',
+  plugins: [heroui()],
 } satisfies Config;

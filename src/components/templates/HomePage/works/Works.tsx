@@ -1,4 +1,4 @@
-import BtnCard from './BtnCard';
+import Link from 'next/link';
 import WorksCard from './WorksCard';
 
 export default function Works() {
@@ -20,7 +20,12 @@ export default function Works() {
         <WorksCard />
         <WorksCard />
       </div>
-      <BtnCard />
+      <Link
+        className="rounded-md hover:opacity-85 duration-300 bg-back text-fore dark:bg-fore dark:text-back px-4 py-2"
+        href="/more-projects"
+      >
+        تمامی نمونه ها
+      </Link>
     </div>
   );
 }

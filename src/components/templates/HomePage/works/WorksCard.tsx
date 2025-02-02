@@ -12,17 +12,20 @@ export default function WorksCard() {
       <div className="border-[1px] w-full opacity-50 rounded-lg mt-6 bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
       <div className="flex justify-around w-full h-full items-center">
         <div>
-          <h3 className="text-black text-xl dark:text-white mb-2">
+          <h3 className="text-black text-lg dark:text-white mb-2">
             نمونه سایت
           </h3>
           <Tooltip
             closeDelay={1000}
-            className="bg-back dark:bg-fore text-fore dark:text-back rounded-md"
+            className="text-fore dark:text-back rounded-md"
             placement="bottom"
+            classNames={{
+              content: 'bg-back dark:bg-fore',
+            }}
             content="React - Next - JavaScript - TailWind"
           >
-            <Button className="text-back dark:text-fore">
-              ابزارها
+            <Button className="text-back bg-fore dark:bg-back cursor-help dark:text-fore p-0 text-base">
+              تکنولوژی ها
               <VscTools />
             </Button>
           </Tooltip>

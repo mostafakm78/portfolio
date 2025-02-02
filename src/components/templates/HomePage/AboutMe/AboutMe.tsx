@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import MoreAboutMe from './MoreAboutMe';
 import React from 'react';
@@ -77,7 +76,7 @@ export default function AboutMe() {
               alt={app.name}
               src={app.src}
             />
-            <span className="font-sans text-fore dark:text-back font-bold">
+            <span className="font-sans text-fore text-[12px] lg:text-base dark:text-back ">
               {app.name}
             </span>
           </div>
