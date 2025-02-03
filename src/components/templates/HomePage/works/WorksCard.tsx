@@ -12,15 +12,13 @@ export default function WorksCard() {
 
       <div className="flex justify-around w-full h-full mt-4 items-center">
         <div>
-          <h3 className="text-white text-lg dark:text-black mb-2">
-            نمونه سایت
-          </h3>
+          <h3 className="text-white text-lg  mb-2">نمونه سایت</h3>
           <Tooltip
             closeDelay={1000}
-            className="text-back dark:text-fore rounded-md"
+            className="text-white dark:text-black rounded-md"
             placement="bottom"
             classNames={{
-              content: 'bg-white dark:bg-black',
+              content: 'bg-black dark:bg-white',
             }}
             content="React - Next - JavaScript - TailWind"
           >
@@ -32,7 +30,7 @@ export default function WorksCard() {
         </div>
         <Link
           href="https://github.com/mostafakm78"
-          className="mt-3 text-white text-lg dark:text-black cursor-pointer"
+          className="mt-3 text-white text-lg cursor-pointer"
           target="_blank"
         >
           مشاهده در GitHub

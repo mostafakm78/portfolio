@@ -11,7 +11,7 @@ export default function LoginForm() {
 
   return (
     <Form
-      className="w-full max-w-xs flex flex-col gap-4"
+      className="w-full max-w-md rounded-md shadow-md bg-white/60 p-8 flex flex-col gap-4"
       validationBehavior="native"
       onReset={() => setAction('reset')}
       onSubmit={(e) => {
@@ -28,6 +28,7 @@ export default function LoginForm() {
         variant="underlined"
         name="email"
         type="email"
+        color="primary"
         errorMessage="ایمیل وارد شده صحیح نمیباشد"
       />
 
@@ -38,6 +39,7 @@ export default function LoginForm() {
         labelPlacement="outside"
         variant="underlined"
         name="password"
+        color="primary"
         type={show ? 'text' : 'password'}
         endContent={
           <div onClick={() => setShow(!show)}>

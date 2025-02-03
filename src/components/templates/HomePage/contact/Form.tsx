@@ -38,7 +38,7 @@ export default function FormContact() {
       <Button
         type="submit"
         radius="none"
-        className="w-40 border-b-1 bg-fore text-green-700 border-green-700 hover:opacity-80 duration-300 dark:bg-back"
+        className="w-40 border-b-1 bg-fore text-green-500 dark:text-green-800 dark:border-green-800 border-green-500 hover:opacity-80 duration-300 dark:bg-back"
       >
         ارسال
       </Button>

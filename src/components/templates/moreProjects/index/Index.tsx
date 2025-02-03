@@ -19,7 +19,7 @@ export default function IndexMore() {
         <WorksCard />
         <WorksCard />
       </div>
-      <div className="my-16">
+      <div className="my-16 text-white/70">
         <span className="opacity-60">
           تمامی حقوق محفوظ است. استفاده بدون اجازه ممنوع
         </span>

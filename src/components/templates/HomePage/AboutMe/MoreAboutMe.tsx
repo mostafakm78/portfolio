@@ -22,7 +22,7 @@ export default function MoreAboutMe() {
         اطلاعات بیشتر
       </Button>
       <Drawer
-        className="bg-back dark:bg-fore text-fore dark:text-back shadow-md"
+        className="bg-fore dark:bg-back text-back dark:text-fore shadow-md"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
       >

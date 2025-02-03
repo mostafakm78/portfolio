@@ -24,7 +24,7 @@ export default function Contact() {
         <FormContact />
         <MoreContact />
       </div>
-      <div className='mb-16'>
+      <div className='mb-16 text-white/70'>
         <span className='opacity-60'>تمامی حقوق محفوظ است. استفاده بدون اجازه ممنوع</span>
       </div>
     </div>

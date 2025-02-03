@@ -49,7 +49,7 @@ export default function NavbarComponent() {
     >
       <NavbarContent>
         <Dropdown
-          className="bg-white/80 mr-20 dark:bg-black/80 shadow-lg rounded-md"
+          className="bg-black/80 mr-20 dark:bg-white/80 shadow-lg rounded-md"
           backdrop="blur"
         >
           <DropdownTrigger>
