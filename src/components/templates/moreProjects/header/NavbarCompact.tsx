@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { FaGithub, FaMoon, FaSun } from 'react-icons/fa';
 import { TbArrowBack } from 'react-icons/tb';
 
-export default function NavbarComponentMoreProjects() {
+export default function NavbarComponentCompact() {
   const [iconTheme, setIconTheme] = useState(false);
 
   return (

@@ -1,5 +1,5 @@
-
-import NavbarComponentMoreProjects from '@/components/templates/moreProjects/header/NavbarProjects';
+import NavbarComponentCompact from '@/components/templates/moreProjects/header/NavbarCompact';
+import IndexMore from '@/components/templates/moreProjects/index/Index';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function MoreProjects() {
-  return <NavbarComponentMoreProjects />;
+  return (
+    <>
+      <NavbarComponentCompact />
+      <IndexMore />
+    </>
+  );
 }

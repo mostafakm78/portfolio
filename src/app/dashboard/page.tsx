@@ -1,5 +1,5 @@
-import NavbarComponent from '@/components/templates/HomePage/header/Navbar';
+import NavbarComponentCompact from '@/components/templates/moreProjects/header/NavbarCompact';
 
 export default function Dashboard() {
-  return <NavbarComponent />;
+  return <NavbarComponentCompact />;
 }
