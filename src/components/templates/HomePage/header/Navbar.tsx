@@ -151,7 +151,8 @@ export default function NavbarComponent() {
         <NavbarItem className="flex space-x-4 space-x-reverse justify-center items-center">
           <Link
             className="text-foreground-50 text-back dark:text-fore text-4xl mt-2"
-            href="#"
+            href="https://github.com/mostafakm78"
+            target="black"
           >
             <FaGithub />
           </Link>

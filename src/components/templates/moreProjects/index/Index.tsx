@@ -1,4 +1,5 @@
-import WorksCard from "../../HomePage/works/WorksCard";
+import Projects from '@/data/projects';
+import WorksCard from '../../HomePage/works/WorksCard';
 
 export default function IndexMore() {
   return (
@@ -10,14 +11,9 @@ export default function IndexMore() {
         <div className="lg:w-2/3 w-2/4 border-[1px] opacity-50 rounded-lg bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
       </div>
       <div className="mt-10 grid lg:grid-cols-2 grid-cols-1 lg:px-10 gap-8 justify-center items-center">
-        <WorksCard />
-        <WorksCard />
-        <WorksCard />
-        <WorksCard />
-        <WorksCard />
-        <WorksCard />
-        <WorksCard />
-        <WorksCard />
+        {[...Projects].reverse().map((project, index) => (
+          <WorksCard key={index} {...project} />
+        ))}
       </div>
       <div className="my-16 text-white/70">
         <span className="opacity-60">

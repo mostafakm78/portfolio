@@ -5,7 +5,11 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import Image from 'next/image';
 
-export default function SingleCard() {
+interface photo {
+  photos: string[];
+}
+
+export default function SingleCard({ photos }: photo) {
   return (
     <>
       <Swiper
@@ -14,35 +18,20 @@ export default function SingleCard() {
         spaceBetween={50}
         slidesPerView={1}
         rewind={true}
-        className="w-10/12"
+        className="w-11/12"
       >
-        <SwiperSlide>
-          <Image
-            className="rounded-lg"
-            src="/images/projects/1/Screenshot 2025-02-01 180909.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            className="rounded-lg"
-            src="/images/projects/1/Screenshot 2025-02-01 180937.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            className="rounded-lg"
-            src="/images/projects/1/Screenshot 2025-02-01 180947.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-        </SwiperSlide>
+        {photos.map((photo) => (
+          <SwiperSlide key={Math.random()}>
+            <Image
+              className="rounded-lg"
+              src={photo}
+              alt=""
+              width={1000}
+              height={1000}
+              quality={100}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

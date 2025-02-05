@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import WorksCard from './WorksCard';
+import Projects from '@/data/projects';
 
 export default function Works() {
   return (
@@ -17,8 +18,9 @@ export default function Works() {
         </span>
       </div>
       <div className="mt-10 grid lg:grid-cols-2 grid-cols-1 lg:px-10 gap-8 justify-center items-center">
-        <WorksCard />
-        <WorksCard />
+        {Projects.slice(-2).map((project) => (
+          <WorksCard key={Math.random()} {...project} />
+        ))}
       </div>
       <Link
         className="rounded-md hover:opacity-85 duration-300 bg-back text-fore dark:bg-fore dark:text-back px-4 py-2"
