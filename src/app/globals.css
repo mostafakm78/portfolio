@@ -90,8 +90,8 @@ body {
   font-family: 'Vazirmatn', sans-serif;
   direction: rtl;
   scroll-behavior: smooth;
-  --sb-track-color: #221f1f;
-  --sb-thumb-color: #a6bbcc;
+  --sb-track-color: #a6bbcc;
+  --sb-thumb-color: #221f1f;
   --sb-size: 10px;
 }
 
@@ -119,8 +119,8 @@ html.dark body {
   font-family: 'Vazirmatn', sans-serif;
   direction: rtl;
   scroll-behavior: smooth;
-  --sb-track-color: #a6bbcc;
-  --sb-thumb-color: #221f1f;
+  --sb-track-color: #221f1f;
+  --sb-thumb-color: #a6bbcc;
   --sb-size: 10px;
 }
 

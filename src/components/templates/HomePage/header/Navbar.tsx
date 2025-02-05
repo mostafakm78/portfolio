@@ -68,7 +68,7 @@ export default function NavbarComponent() {
           >
             <DropdownItem key="home">
               <Link
-                className="cursor-pointer text-back dark:text-fore text-xl"
+                className="cursor-pointer text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl"
                 href="/"
               >
                 <IoMdHome className="ml-2 text-2xl" />
@@ -78,7 +78,7 @@ export default function NavbarComponent() {
             <DropdownItem key="about">
               {' '}
               <Link
-                className="cursor-pointer text-back dark:text-fore text-xl"
+                className="cursor-pointer text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl"
                 onPress={scrollToAbout}
               >
                 <IoIosInformationCircleOutline className="ml-2 text-2xl" />
@@ -87,7 +87,7 @@ export default function NavbarComponent() {
             </DropdownItem>
             <DropdownItem key="contact">
               <Link
-                className=" text-back dark:text-fore text-xl "
+                className=" text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl "
                 onPress={scrollToContact}
               >
                 <GrContact className="ml-2" />
@@ -96,7 +96,7 @@ export default function NavbarComponent() {
             </DropdownItem>
             <DropdownItem key="projects">
               <Link
-                className=" text-back dark:text-fore text-xl"
+                className=" text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl"
                 href="/more-projects"
               >
                 <PiBookmarkSimpleFill className="ml-2 text-2xl" />

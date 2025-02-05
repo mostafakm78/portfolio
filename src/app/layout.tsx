@@ -1,5 +1,5 @@
-import ScrollToTop from '@/helpers/ScrollToTop';
 
+import ScrollToTop from '@/helpers/ScrollToTop';
 import './globals.css';
 
 export default function RootLayout({
