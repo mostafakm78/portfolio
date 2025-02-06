@@ -1,47 +1,166 @@
 'use client';
 
-import { Input, Button, Textarea } from '@heroui/react';
+import { useState } from 'react';
+import { Input, Button, Textarea, Alert, Form } from '@heroui/react';
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export default function FormContact() {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [alertMessage, setAlertMessage] = useState<string | null>(null);
+  const [alertType, setAlertType] = useState<'success' | 'error' | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
+  const handleInputChange = (field: keyof FormData) => (value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+
+    if (!formData.message || !formData.name || !formData.email) {
+      setAlertMessage('وارد کردن همه فیلدها اجباری می‌باشد.');
+      setAlertType('error');
+      setIsSubmitting(false);
+
+      setTimeout(() => setAlertMessage(null), 3000);
+      return;
+    }
+    if (formData.name.length < 3) {
+      setAlertMessage('تعداد کاراکترهای نام باید بیشتر از 3 باشد.');
+      setAlertType('error');
+      setIsSubmitting(false);
+
+      setTimeout(() => setAlertMessage(null), 3000);
+      return;
+    }
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailRegex.test(formData.email)) {
+      setAlertMessage('فرمت ایمیل اشتباه است.');
+      setAlertType('error');
+      setIsSubmitting(false);
+
+      setTimeout(() => setAlertMessage(null), 3000);
+      return;
+    }
+    if (formData.message.length < 30) {
+      return (
+        setAlertMessage('تعداد کاراکترهای پیام شما باید بیشتر از 30 باشد.'),
+        setAlertType('error'),
+        setIsSubmitting(false)
+      );
+    }
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({
+          message: 'خطای ناشناخته',
+        }));
+        setAlertMessage(errorData.message);
+        setAlertType('error');
+        return;
+      }
+
+      setFormData({ name: '', email: '', message: '' });
+      setAlertMessage('پیام ارسال شد!');
+      setAlertType('success');
+      setTimeout(() => setAlertMessage(null), 3000);
+      return;
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      setIsSubmitting(false);
+      setAlertMessage('خطا در ارسال پیام.');
+      setAlertType('error');
+      setTimeout(() => setAlertMessage(null), 3000);
+      return;
+    }
+  };
+
   return (
-    <div className="space-y-4 bg-fore dark:bg-back text-xl w-full flex flex-col justify-center rounded-md items-center p-6 lg:mr-24 max-w-lg">
-      <Input
-        classNames={{
-          label: 'text-back dark:text-fore text-lg',
-          inputWrapper: 'text-lg',
-        }}
-        label="نام"
-        type="text"
-        variant="underlined"
-      />
-      <Input
-        classNames={{
-          label: 'text-back dark:text-fore text-lg',
-          inputWrapper: 'text-lg',
-        }}
-        label="ایمیل"
-        type="email"
-        errorMessage="ایمیل وارد شده صحیح نمیباشد"
-        variant="underlined"
-      />
-      <Textarea
-        classNames={{
-          label: 'text-back dark:text-fore text-lg',
-          inputWrapper: 'text-lg',
-        }}
-        key="underlined"
-        className="col-span-12 md:col-span-6 mb-6 md:mb-0"
-        label="پیام شما"
-        labelPlacement="outside"
-        variant="underlined"
-      />
-      <Button
-        type="submit"
-        radius="none"
-        className="w-40 border-b-1 bg-fore text-green-500 dark:text-green-800 dark:border-green-800 border-green-500 hover:opacity-80 duration-300 dark:bg-back"
+    <>
+      <Form
+        onSubmit={handleSubmit}
+        className="space-y-4 bg-fore dark:bg-back text-xl w-full flex flex-col justify-center rounded-md items-center p-6 lg:mr-24 max-w-lg"
       >
-        ارسال
-      </Button>
-    </div>
+        {alertMessage && (
+          <Alert
+            radius="md"
+            hideIcon
+            color={alertType === 'success' ? 'success' : 'danger'}
+            description={alertMessage}
+            variant="solid"
+            onClose={() => setAlertMessage(null)}
+          />
+        )}
+        <Input
+          name="name"
+          value={formData.name}
+          onValueChange={handleInputChange('name')}
+          color="success"
+          classNames={{
+            base: 'text-back dark:text-fore',
+            label: 'text-back dark:text-fore text-lg',
+            inputWrapper: 'text-lg',
+          }}
+          label="نام"
+          type="text"
+          variant="bordered"
+          isRequired
+        />
+        <Input
+          name="email"
+          value={formData.email}
+          onValueChange={handleInputChange('email')}
+          classNames={{
+            base: 'text-back dark:text-fore',
+            label: 'text-back dark:text-fore text-lg',
+            inputWrapper: 'text-lg',
+          }}
+          label="ایمیل"
+          type="email"
+          color="success"
+          variant="bordered"
+          isRequired
+        />
+        <Textarea
+          name="message"
+          value={formData.message}
+          onValueChange={handleInputChange('message')}
+          color="success"
+          classNames={{
+            base: 'text-back dark:text-fore',
+            label: 'text-back dark:text-fore text-lg',
+            inputWrapper: 'text-lg',
+          }}
+          label="پیام شما"
+          variant="bordered"
+          isRequired
+        />
+        <Button
+          type="submit"
+          radius="none"
+          className="w-40 border-b-1 bg-fore text-green-500 dark:text-green-800 dark:border-green-800 border-green-500 hover:opacity-80 duration-300 dark:bg-back"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'در حال ارسال...' : 'ارسال'}
+        </Button>
+      </Form>
+    </>
   );
 }

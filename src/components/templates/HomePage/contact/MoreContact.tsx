@@ -40,13 +40,19 @@ export default function App() {
         aria-label="Accordion 1"
         title="تلفن و ایمیل من"
       >
-        <p className="flex items-center mb-2 lg:text-lg text-back dark:text-fore">
-          {' '}
-          <FaPhone className="ml-3" /> تلفن : 09169799533{' '}
-        </p>
-        <p className="flex items-center mb-2 lg:text-lg text-back dark:text-fore">
+        <Link
+          href="tel:+989169799533"
+          className="flex items-center mb-2 lg:text-lg dark:text-fore text-back"
+        >
+          <FaPhone className="ml-3" />
+          تلفن: 09169799533
+        </Link>
+        <Link
+          href="mailto:mostafamf555@gmail.com?subject=موضوع شما :&body=سلام !"
+          className="flex items-center mb-2 lg:text-lg text-back dark:text-fore"
+        >
           <MdEmail className="ml-3" /> ایمیل : mostafamf555@gmail.com
-        </p>
+        </Link>
       </AccordionItem>
       <AccordionItem
         classNames={{
@@ -63,6 +69,7 @@ export default function App() {
       >
         <div className="flex flex-row flex-wrap justify-center items-center space-x-6 space-x-reverse">
           <Link
+            isDisabled
             href="/"
             className="flex items-center lg:text-lg text-back dark:text-fore"
           >
@@ -70,7 +77,8 @@ export default function App() {
             <FaInstagram className="ml-2" /> اینستاگرام
           </Link>
           <Link
-            href="/"
+            href="https://t.me/Mostafakamari78"
+            target="_blank"
             className="flex items-center lg:text-lg text-back dark:text-fore"
           >
             {' '}
@@ -78,13 +86,15 @@ export default function App() {
           </Link>
           <Link
             href="/"
+            isDisabled
             className="flex items-center lg:text-lg text-back dark:text-fore"
           >
             {' '}
             <FaLinkedin className="ml-2" /> لینکدین
           </Link>
           <Link
-            href="/"
+            href="https://wa.me/989169799533"
+            target="_blank"
             className="flex items-center lg:text-lg text-back dark:text-fore"
           >
             {' '}

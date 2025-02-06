@@ -15,7 +15,7 @@ interface projects {
 
 export default function WorksCard({ src, photos, tech, name, link }: projects) {
   return (
-    <div className=" rounded-lg bg-back dark:bg-fore min-h-96 lg:max-w-lg w-full mb-6 flex flex-col justify-center items-start p-4 shadow-md">
+    <div className=" rounded-lg bg-back dark:bg-fore min-h-[420px] lg:max-w-lg w-full mb-6 flex flex-col justify-center items-start p-4 shadow-md">
       <SingleCard photos={photos} />
 
       <div className="flex justify-around p-6 w-full h-full mt-4 items-center">
