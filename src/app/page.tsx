@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'به سایت من خوش اومدی :)',
   description: 'my personal portfolio website',
-  icons: '',
+  icons: '/images/PhotoIphone.png',
 };
 
 export default function Home() {

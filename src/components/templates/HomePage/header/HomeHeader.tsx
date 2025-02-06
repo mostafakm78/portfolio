@@ -21,7 +21,7 @@ export default function HomeHeader() {
             isZoomed
             loading="lazy"
             alt="My Prodfile"
-            src="/images/PhotoIphone.png"
+            src="/images/me.jpeg"
             width={400}
             height={500}
           />

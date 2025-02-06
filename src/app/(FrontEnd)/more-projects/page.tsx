@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'صفحه پروژه ها',
   description: 'my personal portfolio website',
-  icons: '',
+  icons: '/images/PhotoIphone.png',
 };
 
 export default function MoreProjects() {
