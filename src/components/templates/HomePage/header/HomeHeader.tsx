@@ -35,7 +35,7 @@ export default function HomeHeader() {
           Front-end Developer
         </span>
         <Link
-          className="text-back dark:text-fore cursor-pointer text-2xl mt-3 border-b-2 pb-1 border-b-back dark:border-b-fore"
+          className="text-back dark:text-fore cursor-pointer text-2xl mt-6 border-b-2 pb-1 border-b-back dark:border-b-fore"
           onPress={scrollToContact}
         >
           تماس با من

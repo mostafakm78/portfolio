@@ -28,7 +28,7 @@ export default function NavbarComponentCompact() {
       <NavbarContent justify="end">
         <NavbarItem>
           <Link
-            className="text-foreground-50 flex justify-center items-center cursor-pointer text-back dark:text-fore text-xl mt-2"
+            className="text-foreground-50 flex justify-center items-center cursor-pointer text-back dark:text-fore text-base mt-2"
             href="/"
           >
             <TbArrowBack />

@@ -42,14 +42,14 @@ export default function App() {
       >
         <Link
           href="tel:+989169799533"
-          className="flex items-center mb-2 lg:text-lg dark:text-fore text-back"
+          className="flex items-center mb-2 lg:text-lg text-sm dark:text-fore text-back"
         >
           <FaPhone className="ml-3" />
           تلفن: 09169799533
         </Link>
         <Link
           href="mailto:mostafamf555@gmail.com?subject=موضوع شما :&body=سلام !"
-          className="flex items-center mb-2 lg:text-lg text-back dark:text-fore"
+          className="flex items-center mb-2 lg:text-lg text-back text-sm dark:text-fore"
         >
           <MdEmail className="ml-3" /> ایمیل : mostafamf555@gmail.com
         </Link>
@@ -67,11 +67,11 @@ export default function App() {
         aria-label="Accordion 2"
         title="منو در فضای مجازی دنبال کنین"
       >
-        <div className="flex flex-row flex-wrap justify-center items-center space-x-6 space-x-reverse">
+        <div className="flex flex-col flex-wrap justify-center items-start  space-x-reverse">
           <Link
             isDisabled
             href="/"
-            className="flex items-center lg:text-lg text-back dark:text-fore"
+            className="flex items-center lg:text-lg text-sm text-back dark:text-fore"
           >
             {' '}
             <FaInstagram className="ml-2" /> اینستاگرام
@@ -79,7 +79,7 @@ export default function App() {
           <Link
             href="https://t.me/Mostafakamari78"
             target="_blank"
-            className="flex items-center lg:text-lg text-back dark:text-fore"
+            className="flex items-center lg:text-lg text-sm text-back dark:text-fore"
           >
             {' '}
             <FaTelegram className="ml-2" /> تلگرام
@@ -87,7 +87,7 @@ export default function App() {
           <Link
             href="/"
             isDisabled
-            className="flex items-center lg:text-lg text-back dark:text-fore"
+            className="flex items-center lg:text-lg text-sm text-back dark:text-fore"
           >
             {' '}
             <FaLinkedin className="ml-2" /> لینکدین
@@ -95,7 +95,7 @@ export default function App() {
           <Link
             href="https://wa.me/989169799533"
             target="_blank"
-            className="flex items-center lg:text-lg text-back dark:text-fore"
+            className="flex items-center lg:text-lg text-sm text-back dark:text-fore"
           >
             {' '}
             <FaWhatsapp className="ml-2" /> واتس اپ

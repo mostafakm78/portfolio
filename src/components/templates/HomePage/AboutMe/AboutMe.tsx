@@ -63,7 +63,7 @@ export default function AboutMe() {
         </span>
         <div className="lg:w-2/3 w-2/4 border-[1px] opacity-50 rounded-lg bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
       </div>
-      <div className="mt-10 grid lg:grid-cols-6 grid-cols-3 px-10 gap-8 justify-center items-center">
+      <div className="mt-10 grid lg:grid-cols-6 grid-cols-2 px-10 gap-8 justify-center items-center">
         {apps.map((app: App) => (
           <div
             key={app.key}

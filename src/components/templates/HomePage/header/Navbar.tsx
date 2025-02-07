@@ -54,7 +54,7 @@ export default function NavbarComponent() {
         >
           <DropdownTrigger>
             <Button
-              className="mt-2 text-2xl bg-fore dark:bg-back lg:hidden"
+              className="mt-2 text-2xl bg-transparent lg:hidden"
               variant="flat"
             >
               {' '}
