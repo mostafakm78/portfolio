@@ -49,7 +49,7 @@ export default function NavbarComponent() {
     >
       <NavbarContent>
         <Dropdown
-          className="bg-black/80 mr-20 dark:bg-white/80 shadow-lg rounded-md"
+          className="bg-white/80 mx-auto dark:bg-black/80 shadow-lg rounded-md"
           backdrop="blur"
         >
           <DropdownTrigger>
@@ -62,13 +62,13 @@ export default function NavbarComponent() {
             </Button>
           </DropdownTrigger>
           <DropdownMenu
-            variant="faded"
+            variant="light"
             className="py-4"
             aria-label="Static Actions"
           >
             <DropdownItem key="home">
               <Link
-                className="cursor-pointer text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl"
+                className="cursor-pointer text-black dark:text-white hover:opacity-60 text-xl"
                 href="/"
               >
                 <IoMdHome className="ml-2 text-2xl" />
@@ -78,7 +78,7 @@ export default function NavbarComponent() {
             <DropdownItem key="about">
               {' '}
               <Link
-                className="cursor-pointer text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl"
+                className="cursor-pointer text-black dark:text-white hover:opacity-60 text-xl"
                 onPress={scrollToAbout}
               >
                 <IoIosInformationCircleOutline className="ml-2 text-2xl" />
@@ -87,7 +87,7 @@ export default function NavbarComponent() {
             </DropdownItem>
             <DropdownItem key="contact">
               <Link
-                className=" text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl "
+                className="cursor-pointer text-black dark:text-white  hover:opacity-60 text-xl"
                 onPress={scrollToContact}
               >
                 <GrContact className="ml-2" />
@@ -96,7 +96,7 @@ export default function NavbarComponent() {
             </DropdownItem>
             <DropdownItem key="projects">
               <Link
-                className=" text-back hover:text-fore dark:hover:text-back dark:text-fore text-xl"
+                className="cursor-pointer text-black dark:text-white  hover:opacity-60 text-xl"
                 href="/more-projects"
               >
                 <PiBookmarkSimpleFill className="ml-2 text-2xl" />
