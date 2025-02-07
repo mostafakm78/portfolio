@@ -21,12 +21,12 @@ export default function SingleCard({ photos }: photo) {
       >
         {photos.map((photo) => (
           <SwiperSlide key={photo}>
-            <div className="w-full h-[300px] lg:h-[500px] relative">
+            <div className="w-full h-[250px] lg:h-[500px] relative">
               <Image
                 src={photo}
                 alt="Slide image"
                 layout="fill"
-                objectFit="cover"
+                objectFit="center"
                 className="rounded-md"
                 quality={100}
               />
