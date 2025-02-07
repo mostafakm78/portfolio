@@ -30,7 +30,7 @@ export default function MoreAboutMe() {
         <DrawerContent>
           {(onClose) => (
             <>
-              <DrawerHeader className="flex text-white dark:text-black flex-col gap-1 text-xl">
+              <DrawerHeader className="flex  flex-col gap-1 text-xl">
                 درباره من
               </DrawerHeader>
               <DrawerBody>

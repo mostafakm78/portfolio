@@ -6,12 +6,13 @@ import {
   Button,
   useDisclosure,
 } from '@heroui/react';
+import SingleCard from './SingleCard';
 
-interface techs {
-  tech: string[];
+interface photos {
+  photos: string[];
 }
 
-export default function WorksModal({ tech }: techs) {
+export default function PhotoModal({ photos }: photos) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
@@ -20,21 +21,25 @@ export default function WorksModal({ tech }: techs) {
         onPress={onOpen}
         className="rounded-md bg-transparent hover:opacity-85 duration-300 text-fore dark:text-back"
       >
-        توضیحات و تکنولوژی ها
+        مشاهده عکس ها
       </Button>
       <Modal
+        hideCloseButton={true}
         isOpen={isOpen}
+        shadow='none'
+        backdrop="opaque"
         placement="center"
-        className="bg-fore dark:bg-back text-back dark:text-fore shadow-md"
+        size="5xl"
+        className="bg-transparent text-back dark:text-fore"
         onOpenChange={onOpenChange}
       >
         <ModalContent>
           <>
             <ModalHeader className="flex flex-col gap-1">
-              توضیحات و تکنولوژی ها
+              مشاهده عکس ها
             </ModalHeader>
-            <ModalBody>
-              <p className="py-4">{tech.join(' - ')}</p>
+            <ModalBody className='w-full'>
+              <SingleCard photos={photos} />
             </ModalBody>
           </>
         </ModalContent>

@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
@@ -11,31 +10,30 @@ interface photo {
 
 export default function SingleCard({ photos }: photo) {
   return (
-    <>
+    <div className="w-full h-auto">
       <Swiper
-        pagination={{
-          dynamicBullets: true,
-        }}
+        pagination
         modules={[Pagination]}
-        className="w-11/12 h-48 lg:h-72 flex items-center justify-center"
-        effect="cards"
+        className="w-full h-full"
         spaceBetween={50}
         slidesPerView={1}
-        loop={true}
+        loop
       >
         {photos.map((photo) => (
-          <SwiperSlide key={Math.random()}>
-            <Image
-              className="lg:rounded-md"
-              src={photo}
-              alt=""
-              width={1000}
-              height={1000}
-              quality={100}
-            />
+          <SwiperSlide key={photo}>
+            <div className="w-full h-[300px] lg:h-[500px] relative">
+              <Image
+                src={photo}
+                alt="Slide image"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-md"
+                quality={100}
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }
