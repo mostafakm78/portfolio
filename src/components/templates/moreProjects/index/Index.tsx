@@ -25,7 +25,7 @@ const SearchComponent = () => {
   }, [queryTerm]);
 
   const executeSearch = () => {
-    if (!searchTerm.trim()) return; // جلوگیری از جستجوی خالی
+    if (!searchTerm.trim()) return;
     setLoading(true);
     setTimeout(() => {
       router.push(`?q=${encodeURIComponent(searchTerm)}`);
@@ -54,7 +54,7 @@ const SearchComponent = () => {
   );
 
   return (
-    <div className="flex flex-col px-10 justify-center items-center min-h-screen">
+    <div className={loading ? "flex flex-col px-10 justify-start items-center min-h-screen" : "flex flex-col px-10 justify-center items-center min-h-screen"}>
       <div className="flex bg-fore w-full gap-10 justify-center items-center mt-5 dark:bg-back">
         <span className="lg:text-4xl text-xl mt-4 text-back dark:text-fore">
           تمامی نمونه‌ها
@@ -79,9 +79,9 @@ const SearchComponent = () => {
       </div>
 
       {loading ? (
-        <div className="flex gap-4 lg:text-4xl text-2xl w-full justify-center items-center">
+        <div className="flex items-center justify-center gap-4 lg:text-4xl text-2xl w-full">
           <p className="text-back dark:text-fore mt-10">در حال جستجو...</p>
-          <ImSpinner8 className="animate-spin mt-10" />
+          <ImSpinner8 className="animate-spin text-back dark:text-fore mt-10" />
         </div>
       ) : filteredProjects.length > 0 ? (
         <div className="mt-10 grid lg:grid-cols-2 grid-cols-1 lg:px-10 gap-8 justify-center items-center">
