@@ -1,13 +1,13 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, Suspense } from 'react';
 import Projects from '@/data/projects';
 import WorksCard from '../../HomePage/works/WorksCard';
 import { FaSearch } from 'react-icons/fa';
 import { ImSpinner8 } from 'react-icons/im';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function IndexMore() {
+const SearchComponent = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [finalSearchTerm, setFinalSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
@@ -109,5 +109,13 @@ export default function IndexMore() {
         </span>
       </div>
     </div>
+  );
+};
+
+export default function IndexMore() {
+  return (
+    <Suspense fallback={<div>در حال بارگذاری...</div>}>
+      <SearchComponent />
+    </Suspense>
   );
 }
