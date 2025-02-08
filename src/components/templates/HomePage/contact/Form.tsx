@@ -112,7 +112,7 @@ export default function FormContact() {
           name="name"
           value={formData.name}
           onValueChange={handleInputChange('name')}
-          color="success"
+          color="primary"
           classNames={{
             base: 'text-fore dark:text-back',
             label: 'text-fore dark:text-back text-lg',
@@ -134,7 +134,7 @@ export default function FormContact() {
           }}
           label="ایمیل"
           type="email"
-          color="success"
+          color="primary"
           variant="bordered"
           isRequired
         />
@@ -142,7 +142,7 @@ export default function FormContact() {
           name="message"
           value={formData.message}
           onValueChange={handleInputChange('message')}
-          color="success"
+          color="primary"
           classNames={{
             base: 'text-fore dark:text-back',
             label: 'text-fore dark:text-back text-lg',
@@ -154,8 +154,9 @@ export default function FormContact() {
         />
         <Button
           type="submit"
-          radius="none"
-          className="w-40 border-b-1 bg-transparent text-white hover:text-green-600 hover:border-green-600 duration-300"
+          radius="md"
+          variant='bordered'
+          className="w-40 bg-transparen hover:text-blue-700 hover:border-blue-700 duration-300"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'در حال ارسال...' : 'ارسال'}

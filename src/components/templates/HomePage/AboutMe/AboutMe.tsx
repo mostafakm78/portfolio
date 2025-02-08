@@ -26,7 +26,7 @@ const apps = [
     name: 'VS Code',
   },
   { key: 'HeroUI', src: '/images/isotipo.png', name: 'HeroUI' },
-  { key: 'WebPack', src: '/images/webpack-icon.png', name: 'WebPack' },
+  { key: 'React', src: '/images/react-js-icon.png', name: 'React' },
 ];
 
 interface App {

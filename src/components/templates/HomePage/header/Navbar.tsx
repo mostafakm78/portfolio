@@ -45,11 +45,12 @@ export default function NavbarComponent() {
       shouldHideOnScroll={true}
       isBordered={true}
       maxWidth="xl"
-      className="bg-fore shadow-md dark:bg-back p-3"
+
+      className="bg-fore shadow-md dark:bg-back lg:p-3"
     >
       <NavbarContent>
         <Dropdown
-          className="bg-white/80 mx-auto dark:bg-black/80 shadow-lg rounded-md"
+          className="bg-white/80 dark:bg-black/80 shadow-lg rounded-md"
           backdrop="blur"
         >
           <DropdownTrigger>

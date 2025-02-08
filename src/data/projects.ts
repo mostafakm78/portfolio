@@ -8,16 +8,6 @@ interface projects {
 
 const Projects: projects[] = [
   {
-    name: 'زوم تصاویر',
-    src: 'https://mostafakm78.github.io/Zoom-html-js/',
-    photos: [
-      '/images/projects/ZoomJs/1-Zoom.png',
-      '/images/projects/ZoomJs/2-Zoom.png',
-      '/images/projects/ZoomJs/3-Zoom.png',
-    ],
-    tech: ['JavaScript', 'Css', 'Html'],
-  },
-  {
     name: 'لندینگ پیج رسپانسیو',
     src: 'https://mostafakm78.github.io/LandingPage/',
     photos: [
@@ -45,15 +35,6 @@ const Projects: projects[] = [
       '/images/projects/ToDoList/1-ToDoList.png',
       '/images/projects/ToDoList/2-ToDoList.png',
       '/images/projects/ToDoList/3-ToDoList.png',
-    ],
-    tech: ['JavaScript', 'Css', 'Html'],
-  },
-  {
-    name: 'ُStopWatch',
-    src: 'https://mostafakm78.github.io/StopWatch-Js/',
-    photos: [
-      '/images/projects/StopWatch/1-StopWatch.png',
-      '/images/projects/StopWatch/2-StopWatch.png',
     ],
     tech: ['JavaScript', 'Css', 'Html'],
   },
@@ -91,15 +72,6 @@ const Projects: projects[] = [
     tech: ['JavaScript', 'Css', 'Html'],
   },
   {
-    name: 'کارت نمایش محصول',
-    src: 'https://mostafakm78.github.io/Product-page-js/',
-    photos: [
-      '/images/projects/ProductBox/1-ProductBox.png',
-      '/images/projects/ProductBox/2-ProductBox.png',
-    ],
-    tech: ['JavaScript', 'Css', 'Html'],
-  },
-  {
     name: 'پیام popup',
     src: 'https://mostafakm78.github.io/Popup-Massege-js/',
     photos: [
@@ -118,12 +90,6 @@ const Projects: projects[] = [
     tech: ['JavaScript', 'Css', 'Html'],
   },
   {
-    name: 'موزیک پلیر',
-    src: 'https://mostafakm78.github.io/Music-player-js/',
-    photos: ['/images/projects/MusicPlayer/1-MusicPlayer.png'],
-    tech: ['JavaScript', 'Css', 'Html'],
-  },
-  {
     name: 'منوی DropDown ساده',
     src: 'https://mostafakm78.github.io/simple-Menu-Js/',
     photos: [
@@ -139,15 +105,6 @@ const Projects: projects[] = [
       '/images/projects/BackImgRem/1-BackImgRem.png',
       '/images/projects/BackImgRem/2-BackImgRem.png',
       '/images/projects/BackImgRem/3-BackImgRem.png',
-    ],
-    tech: ['JavaScript', 'Css', 'Html'],
-  },
-  {
-    name: 'صفحه شروع به زودی سایت',
-    src: 'https://mostafakm78.github.io/LaunchingWebsite/',
-    photos: [
-      '/images/projects/Launch/1-Launch.png',
-      '/images/projects/Launch/2-Launch.png',
     ],
     tech: ['JavaScript', 'Css', 'Html'],
   },
