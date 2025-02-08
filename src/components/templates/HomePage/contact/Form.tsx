@@ -96,7 +96,7 @@ export default function FormContact() {
     <>
       <Form
         onSubmit={handleSubmit}
-        className="space-y-4 bg-back dark:bg-fore shadow-md text-xl w-full flex flex-col justify-center rounded-md items-center p-6 lg:mr-24 max-w-lg"
+        className="space-y-4 text-xl w-full flex flex-col justify-center rounded-md items-center p-6 lg:mr-24 max-w-lg"
       >
         {alertMessage && (
           <Alert
@@ -114,8 +114,8 @@ export default function FormContact() {
           onValueChange={handleInputChange('name')}
           color="primary"
           classNames={{
-            base: 'text-fore dark:text-back',
-            label: 'text-fore dark:text-back text-lg',
+            base: 'text-back dark:text-fore',
+            label: 'text-back dark:text-fore text-lg',
             inputWrapper: 'text-lg',
           }}
           label="نام"
@@ -128,8 +128,8 @@ export default function FormContact() {
           value={formData.email}
           onValueChange={handleInputChange('email')}
           classNames={{
-            base: 'text-fore dark:text-back',
-            label: 'text-fore dark:text-back text-lg',
+            base: 'text-back dark:text-fore',
+            label: 'text-back dark:text-fore text-lg',
             inputWrapper: 'text-lg',
           }}
           label="ایمیل"
@@ -144,8 +144,8 @@ export default function FormContact() {
           onValueChange={handleInputChange('message')}
           color="primary"
           classNames={{
-            base: 'text-fore dark:text-back',
-            label: 'text-fore dark:text-back text-lg',
+            base: 'text-back dark:text-fore',
+            label: 'text-back dark:text-fore text-lg',
             inputWrapper: 'text-lg',
           }}
           label="پیام شما"
@@ -156,7 +156,7 @@ export default function FormContact() {
           type="submit"
           radius="md"
           variant="bordered"
-          className="w-40 bg-transparen text-black dark:text-white hover:text-blue-700 dark:hover:text-blue-700 hover:border-blue-700 duration-300"
+          className="w-40 bg-transparen text-back dark:text-fore hover:text-blue-700 dark:hover:text-blue-700 hover:border-blue-700 duration-300"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'در حال ارسال...' : 'ارسال'}
