@@ -156,7 +156,7 @@ export default function FormContact() {
           type="submit"
           radius="md"
           variant="bordered"
-          className="w-40 bg-transparen text-white dark:text-black hover:text-blue-700 dark:hover:text-blue-700 hover:border-blue-700 duration-300"
+          className="w-40 bg-transparen text-black dark:text-white hover:text-blue-700 dark:hover:text-blue-700 hover:border-blue-700 duration-300"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'در حال ارسال...' : 'ارسال'}
