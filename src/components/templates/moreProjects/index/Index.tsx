@@ -54,7 +54,9 @@ const SearchComponent = () => {
   );
 
   return (
-    <div className={loading ? "flex flex-col px-10 justify-start items-center min-h-screen" : "flex flex-col px-10 justify-center items-center min-h-screen"}>
+    <div
+      className={'flex flex-col px-10 justify-start items-center min-h-screen'}
+    >
       <div className="flex bg-fore w-full gap-10 justify-center items-center mt-5 dark:bg-back">
         <span className="lg:text-4xl text-xl mt-4 text-back dark:text-fore">
           تمامی نمونه‌ها
@@ -70,7 +72,7 @@ const SearchComponent = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleInputKeyDown}
-          className="w-full px-4 py-2 pr-10 placeholder:text-xs md:placeholder:text-sm lg:placeholder:text-base border-[1px] rounded-lg bg-back dark:bg-fore text-fore dark:text-back"
+          className="w-full px-4 py-2 pr-10 placeholder:text-xs md:placeholder:text-sm placeholder:text-black/50 dark:placeholder:text-white/50 lg:placeholder:text-base border-[1px] rounded-lg bg-back dark:bg-fore text-fore dark:text-back"
         />
         <FaSearch
           className="absolute right-3 top-3 text-fore dark:text-back cursor-pointer"
@@ -84,14 +86,14 @@ const SearchComponent = () => {
           <ImSpinner8 className="animate-spin text-back dark:text-fore mt-10" />
         </div>
       ) : filteredProjects.length > 0 ? (
-        <div className="mt-10 grid lg:grid-cols-2 grid-cols-1 lg:px-10 gap-8 justify-center items-center">
+        <div className="mt-10 grid lg:grid-cols-2 grid-cols-1  lg:px-10 gap-8 justify-center items-center">
           {[...filteredProjects].reverse().map((project, index) => (
             <WorksCard key={index} {...project} />
           ))}
         </div>
       ) : (
         <div className="mt-10 grid grid-cols-1 lg:px-10 gap-8 justify-center items-center">
-          <p className="text-back dark:text-fore mx-auto lg:text-5xl text-2xl mt-10">
+          <p className="text-red-700 mx-auto lg:text-5xl text-3xl mt-10">
             متاسفانه هیچ نتیجه‌ای پیدا نشد :(
           </p>
           <button
