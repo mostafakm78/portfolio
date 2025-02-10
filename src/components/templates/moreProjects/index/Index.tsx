@@ -72,7 +72,7 @@ const SearchComponent = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleInputKeyDown}
-          className="w-full px-4 py-2 pr-10 placeholder:text-xs md:placeholder:text-sm placeholder:text-black/50 dark:placeholder:text-white/50 lg:placeholder:text-base border-[1px] rounded-lg bg-back dark:bg-fore text-fore dark:text-back"
+          className="w-full px-4 py-2 pr-10 placeholder:text-xs md:placeholder:text-sm placeholder:text-gray-500 outline-none lg:placeholder:text-base rounded-lg bg-back dark:bg-fore text-fore dark:text-back"
         />
         <FaSearch
           className="absolute right-3 top-3 text-fore dark:text-back cursor-pointer"

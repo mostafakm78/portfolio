@@ -30,7 +30,7 @@ export default function App() {
       <AccordionItem
         key="1"
         classNames={{
-          title: 'text-lg text-black dark:text-white/70  mr-4',
+          title: 'text-lg text-green-700 mr-4',
           heading: 'bg-back dark:bg-fore rounded-md shadow-md',
           trigger: 'pl-4',
           indicator: 'text-green-600 text-2xl',
@@ -56,7 +56,7 @@ export default function App() {
       </AccordionItem>
       <AccordionItem
         classNames={{
-          title: 'text-lg text-black dark:text-white/70 mr-4',
+          title: 'text-lg text-green-700 mr-4',
           heading: 'bg-back dark:bg-fore rounded-md shadow-md',
           trigger: 'pl-4',
           indicator: 'text-green-600 text-2xl',
