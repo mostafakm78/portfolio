@@ -16,7 +16,7 @@ export default function MoreAboutMe() {
   return (
     <>
       <Button
-        className="rounded-md hover:opacity-85 duration-300 bg-back text-fore dark:bg-fore dark:text-back"
+        className="rounded-md hover:opacity-85 mt-6 duration-300 bg-back text-fore dark:bg-fore dark:text-back"
         onPress={onOpen}
       >
         اطلاعات بیشتر
