@@ -69,8 +69,8 @@ export default function App() {
       >
         <div className="flex flex-col flex-wrap justify-center items-start  space-x-reverse">
           <Link
-            isDisabled
-            href="/"
+            href="http://www.instagram.com/imyour_mosi"
+            target="_blank"
             className="flex items-center lg:text-lg text-sm text-back dark:text-fore"
           >
             {' '}
@@ -85,8 +85,8 @@ export default function App() {
             <FaTelegram className="ml-2" /> تلگرام
           </Link>
           <Link
-            href="/"
-            isDisabled
+            href="http://linkedin.com/in/mostafa-kamari-b82450351"
+            target="_blank"
             className="flex items-center lg:text-lg text-sm text-back dark:text-fore"
           >
             {' '}

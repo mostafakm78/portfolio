@@ -80,6 +80,7 @@ export default function FormContact() {
       setFormData({ name: '', email: '', message: '' });
       setAlertMessage('پیام ارسال شد!');
       setAlertType('success');
+      setIsSubmitting(false);
       setTimeout(() => setAlertMessage(null), 3000);
       return;
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
