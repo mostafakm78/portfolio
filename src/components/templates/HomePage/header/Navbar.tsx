@@ -32,8 +32,8 @@ export default function NavbarComponent() {
   }, []);
 
   return (
-    <Navbar shouldHideOnScroll={true} isBordered={true} maxWidth="xl" className="bg-fore shadow-md dark:bg-back lg:p-3" dir={i18n.language === 'fa' ? 'rtl' : 'ltr'}>
-      <NavbarContent>
+    <Navbar dir={i18n.language === 'fa' ? 'rtl' : 'ltr'} shouldHideOnScroll={true} isBordered={true} maxWidth="xl" className="bg-fore shadow-md dark:bg-back lg:p-3">
+      <NavbarContent justify='start'>
         <Dropdown className="bg-white/80 dark:bg-black/80 shadow-lg rounded-md" backdrop="blur">
           <DropdownTrigger>
             <Button className="mt-2 text-2xl bg-transparent lg:hidden" variant="flat">
@@ -44,37 +44,37 @@ export default function NavbarComponent() {
           <DropdownMenu variant="light" dir={i18n.language === 'fa' ? 'rtl' : 'ltr'} className="py-4" aria-label="Static Actions">
             <DropdownItem key="home">
               <Link className="cursor-pointer text-black dark:text-white hover:opacity-60 text-xl" href="/">
-                <IoMdHome className={i18n.language === 'fa' ? "ml-2 text-2xl" : 'mr-2 text-2xl'} />
+                <IoMdHome className={i18n.language === 'fa' ? 'ml-2 text-2xl' : 'mr-2 text-2xl'} />
                 {t('Home Page')}
               </Link>
             </DropdownItem>
             <DropdownItem key="about">
               {' '}
               <Link className="cursor-pointer text-black dark:text-white hover:opacity-60 text-xl" onPress={scrollToAbout}>
-                <IoIosInformationCircleOutline className={i18n.language === 'fa' ? "ml-2 text-2xl" : 'mr-2 text-2xl'} />
+                <IoIosInformationCircleOutline className={i18n.language === 'fa' ? 'ml-2 text-2xl' : 'mr-2 text-2xl'} />
                 {t('About Me')}
               </Link>
             </DropdownItem>
             <DropdownItem key="contact">
               <Link className="cursor-pointer text-black dark:text-white  hover:opacity-60 text-xl" onPress={scrollToContact}>
-                <GrContact className={i18n.language === 'fa' ? "ml-2 text-2xl" : 'mr-2 text-2xl'} />
+                <GrContact className={i18n.language === 'fa' ? 'ml-2 text-2xl' : 'mr-2 text-2xl'} />
                 {t('Contact Me')}
               </Link>
             </DropdownItem>
             <DropdownItem key="projects">
               <Link className="cursor-pointer text-black dark:text-white  hover:opacity-60 text-xl" href="/more-projects">
-                <PiBookmarkSimpleFill className={i18n.language === 'fa' ? "ml-2 text-2xl" : 'mr-2 text-2xl'} />
+                <PiBookmarkSimpleFill className={i18n.language === 'fa' ? 'ml-2 text-2xl' : 'mr-2 text-2xl'} />
                 {t('Resume')}
               </Link>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarBrand>
+        <NavbarBrand className='hidden lg:block'>
           <p className="text-back dark:text-fore text-2xl mt-2">{t('Mostafa Kamari')}</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden space-x-2 space-x-reverse sm:flex gap-6" justify="center">
+      <NavbarContent dir={i18n.language === 'fa' ? 'rtl' : 'ltr'} className="hidden space-x-2 space-x-reverse sm:flex gap-6" justify="center">
         <NavbarItem>
           <Link className="text-foreground-50 hidden lg:block cursor-pointer text-back dark:text-fore text-2xl mt-2" href="/">
             {t('Home Page')}
@@ -96,11 +96,11 @@ export default function NavbarComponent() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
+      <NavbarContent className='mr-10' justify="end">
         <NavbarItem className={i18n.language === 'fa' ? 'flex space-x-4 space-x-reverse justify-center items-center' : 'flex space-x-4 justify-center items-center'}>
-          <Link className="text-foreground-50 text-back dark:text-fore text-4xl mt-2" href="https://github.com/mostafakm78" target="black">
-            <FaGithub />
-          </Link>
+        <Link className="text-foreground-50 text-back dark:text-fore text-4xl mt-2" href="https://github.com/mostafakm78" target="black">
+          <FaGithub />
+        </Link>
           <span
             onClick={() => {
               setIconTheme(!iconTheme);
@@ -114,7 +114,7 @@ export default function NavbarComponent() {
             onClick={() => {
               i18n.changeLanguage(i18n.language === 'en' ? 'fa' : 'en');
             }}
-            className="text-back cursor-pointer hover:opacity-75 duration-200  dark:text-fore text-2xl mt-3"
+            className="text-back cursor-pointer hover:opacity-75 duration-200 dark:text-fore text-2xl mt-3"
           >
             {i18n.language === 'en' ? 'fa' : 'En'}
           </span>
