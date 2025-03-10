@@ -1,10 +1,11 @@
 'use client';
-
+import { useTranslation } from 'react-i18next';
 import { Link } from '@heroui/react';
 import { BsEye, BsGithub } from 'react-icons/bs';
 import WorksModal from './WorksModal';
 import Image from 'next/image';
 import PhotoModal from './PhotoModal';
+import i18n from '@/helpers/i18n';
 
 interface projects {
   name: string;
@@ -15,6 +16,7 @@ interface projects {
 }
 
 export default function WorksCard({ src, photos, tech, name, link }: projects) {
+    const {t} = useTranslation()
   return (
     <div className="rounded-lg bg-back dark:bg-fore min-h-[450px] lg:max-w-lg w-full mb-6 flex flex-col justify-between py-4 shadow-md h-[500px]">
       <div className="p-4 w-full h-[250px] flex items-center justify-center">
@@ -25,7 +27,7 @@ export default function WorksCard({ src, photos, tech, name, link }: projects) {
         <div className="flex flex-row w-full justify-around">
           {link && (
             <Link href={link} className="text-fore dark:text-back animate-appearance-in text-base cursor-pointer" target="_blank">
-              مشاهده
+              {t('View')}
               <BsEye className="mr-1 text-xl mb-1" />
             </Link>
           )}
@@ -33,8 +35,8 @@ export default function WorksCard({ src, photos, tech, name, link }: projects) {
         </div>
         <PhotoModal photos={photos} />
         <Link href={src} className="rounded-md bg-transparent hover:opacity-85 duration-300 text-fore dark:text-back p-2 cursor-pointer" target="_blank">
-          مشاهده در GitHub
-          <BsGithub className="mr-1 text-xl mb-1" />
+          {t('See in Github')}
+          <BsGithub className={i18n.language === 'fa' ? 'mr-1 text-xl mb-1' : 'ml-1 text-xl mb-1'} />
         </Link>
       </div>
     </div>

@@ -1,3 +1,5 @@
+'use client'
+import { useTranslation } from 'react-i18next';
 import {
   Modal,
   ModalContent,
@@ -12,6 +14,7 @@ interface techs {
 }
 
 export default function WorksModal({ tech }: techs) {
+    const { t } = useTranslation();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
@@ -20,7 +23,7 @@ export default function WorksModal({ tech }: techs) {
         onPress={onOpen}
         className="rounded-md bg-transparent hover:opacity-85 duration-300 text-fore dark:text-back"
       >
-        توضیحات و تکنولوژی ها
+        {t('Dec')}
       </Button>
       <Modal
         isOpen={isOpen}
@@ -31,7 +34,7 @@ export default function WorksModal({ tech }: techs) {
         <ModalContent>
           <>
             <ModalHeader className="flex flex-col gap-1">
-              توضیحات و تکنولوژی ها
+              {t('Dec')}
             </ModalHeader>
             <ModalBody>
               <p className="py-4">{tech.join(' - ')}</p>

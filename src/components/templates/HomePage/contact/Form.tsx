@@ -1,5 +1,5 @@
 'use client';
-
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { Input, Button, Textarea, Alert, Form } from '@heroui/react';
 
@@ -10,6 +10,7 @@ interface FormData {
 }
 
 export default function FormContact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -29,7 +30,7 @@ export default function FormContact() {
     setIsSubmitting(true);
 
     if (!formData.message || !formData.name || !formData.email) {
-      setAlertMessage('وارد کردن همه فیلدها اجباری می‌باشد.');
+      setAlertMessage(t('Fields'));
       setAlertType('error');
       setIsSubmitting(false);
 
@@ -37,7 +38,7 @@ export default function FormContact() {
       return;
     }
     if (formData.name.length < 3) {
-      setAlertMessage('تعداد کاراکترهای نام باید بیشتر از 3 باشد.');
+      setAlertMessage(t('NameChar'));
       setAlertType('error');
       setIsSubmitting(false);
 
@@ -46,7 +47,7 @@ export default function FormContact() {
     }
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailRegex.test(formData.email)) {
-      setAlertMessage('فرمت ایمیل اشتباه است.');
+      setAlertMessage(t('EmailFormat'));
       setAlertType('error');
       setIsSubmitting(false);
 
@@ -54,11 +55,7 @@ export default function FormContact() {
       return;
     }
     if (formData.message.length < 30) {
-      return (
-        setAlertMessage('تعداد کاراکترهای پیام شما باید بیشتر از 30 باشد.'),
-        setAlertType('error'),
-        setIsSubmitting(false)
-      );
+      return setAlertMessage(t('MsgChar')), setAlertType('error'), setIsSubmitting(false);
     }
 
     try {
@@ -70,7 +67,7 @@ export default function FormContact() {
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({
-          message: 'خطای ناشناخته',
+          message: t('Error'),
         }));
         setAlertMessage(errorData.message);
         setAlertType('error');
@@ -78,7 +75,7 @@ export default function FormContact() {
       }
 
       setFormData({ name: '', email: '', message: '' });
-      setAlertMessage('پیام ارسال شد!');
+      setAlertMessage(t('SendMsg'));
       setAlertType('success');
       setIsSubmitting(false);
       setTimeout(() => setAlertMessage(null), 3000);
@@ -86,7 +83,7 @@ export default function FormContact() {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setIsSubmitting(false);
-      setAlertMessage('خطا در ارسال پیام.');
+      setAlertMessage(t('ErrorMsg'));
       setAlertType('error');
       setTimeout(() => setAlertMessage(null), 3000);
       return;
@@ -95,20 +92,8 @@ export default function FormContact() {
 
   return (
     <>
-      <Form
-        onSubmit={handleSubmit}
-        className="space-y-4 text-xl w-full flex flex-col justify-center rounded-md items-center p-6 lg:mr-24 max-w-lg"
-      >
-        {alertMessage && (
-          <Alert
-            radius="md"
-            hideIcon
-            color={alertType === 'success' ? 'success' : 'danger'}
-            description={alertMessage}
-            variant="solid"
-            onClose={() => setAlertMessage(null)}
-          />
-        )}
+      <Form onSubmit={handleSubmit} className="space-y-4 text-xl w-full flex flex-col justify-center rounded-md items-center p-6 lg:mr-24 max-w-lg">
+        {alertMessage && <Alert radius="md" hideIcon color={alertType === 'success' ? 'success' : 'danger'} description={alertMessage} variant="solid" onClose={() => setAlertMessage(null)} />}
         <Input
           name="name"
           value={formData.name}
@@ -119,7 +104,7 @@ export default function FormContact() {
             label: 'text-back dark:text-fore text-lg',
             inputWrapper: 'text-lg',
           }}
-          label="نام"
+          label={t('Name')}
           type="text"
           variant="bordered"
           isRequired
@@ -133,7 +118,7 @@ export default function FormContact() {
             label: 'text-back dark:text-fore text-lg',
             inputWrapper: 'text-lg',
           }}
-          label="ایمیل"
+          label={t('Email')}
           type="email"
           color="primary"
           variant="bordered"
@@ -149,18 +134,12 @@ export default function FormContact() {
             label: 'text-back dark:text-fore text-lg',
             inputWrapper: 'text-lg',
           }}
-          label="پیام شما"
+          label={t('Msg')}
           variant="bordered"
           isRequired
         />
-        <Button
-          type="submit"
-          radius="md"
-          variant="bordered"
-          className="w-40 bg-transparen text-back dark:text-fore hover:text-blue-700 dark:hover:text-blue-700 hover:border-blue-700 duration-300"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? 'در حال ارسال...' : 'ارسال'}
+        <Button type="submit" radius="md" variant="bordered" className="w-40 bg-transparen text-back dark:text-fore hover:text-blue-700 dark:hover:text-blue-700 hover:border-blue-700 duration-300" disabled={isSubmitting}>
+          {isSubmitting ? t('Sending') : t('Send')}
         </Button>
       </Form>
     </>

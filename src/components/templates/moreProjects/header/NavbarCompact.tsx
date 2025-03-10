@@ -1,4 +1,5 @@
 'use client';
+import { useTranslation } from 'react-i18next';
 import {
   Navbar,
   NavbarBrand,
@@ -11,6 +12,7 @@ import { FaGithub, FaMoon, FaSun } from 'react-icons/fa';
 import { TbArrowBack } from 'react-icons/tb';
 
 export default function NavbarComponentCompact() {
+    const {t , i18n} = useTranslation()
   const [iconTheme, setIconTheme] = useState(false);
 
   return (
@@ -19,10 +21,11 @@ export default function NavbarComponentCompact() {
       isBordered={true}
       maxWidth="xl"
       className="bg-fore shadow-md dark:bg-back p-3"
+      dir={i18n.language === 'fa' ? 'rtl' : 'ltr'}
     >
       <NavbarContent>
         <NavbarBrand>
-          <p className="text-back dark:text-fore text-2xl mt-2">مصطفی کمری</p>
+          <p className="text-back dark:text-fore text-2xl mt-2">{t('Mostafa Kamari')}</p>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent justify="end">
@@ -32,10 +35,10 @@ export default function NavbarComponentCompact() {
             href="/"
           >
             <TbArrowBack />
-            صفحه اصلی
+            {t('Home Page')}
           </Link>
         </NavbarItem>
-        <NavbarItem className="flex space-x-4 space-x-reverse justify-center items-center">
+        <NavbarItem className={i18n.language === 'fa' ? 'flex space-x-4 space-x-reverse justify-center items-center' : 'flex space-x-4 justify-center items-center'}>
           <Link
             className="text-foreground-50 text-back dark:text-fore text-4xl mt-2"
             href="https://github.com/mostafakm78"
