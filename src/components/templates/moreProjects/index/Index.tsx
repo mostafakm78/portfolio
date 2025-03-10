@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState, Suspense } from 'react';
-import Projects from '@/data/projects';
+import Projects from '@/data/projects.json';
 import WorksCard from '../../HomePage/works/WorksCard';
 import { FaSearch } from 'react-icons/fa';
 import { ImSpinner8 } from 'react-icons/im';
@@ -47,7 +47,7 @@ const SearchComponent = () => {
     router.push('/more-projects');
   };
 
-  const filteredProjects = Projects.filter((project) =>
+  const filteredProjects = Projects.projects.filter((project) =>
     project.tech.some((technology) =>
       technology.toLowerCase().includes(finalSearchTerm.toLowerCase())
     )
