@@ -59,8 +59,8 @@ I hope to continue this journey with more learning and experiences and create am
           'Fields' : 'All fields are required.',
           'NameChar' : 'The number of characters in the name must be greater than 3.',
           'EmailFormat' : 'The email format is incorrect.',
-          'MsgChar' : 'Your message must be longer than 30 characters.'
-
+          'MsgChar' : 'Your message must be longer than 30 characters.',
+            'Load More' : 'Load More'
     },
   },
   fa: {
@@ -131,7 +131,8 @@ I hope to continue this journey with more learning and experiences and create am
           'Fields' : 'وارد کردن همه فیلدها اجباری می‌باشد.',
           'NameChar' : 'تعداد کاراکترهای نام باید بیشتر از 3 باشد.',
           'EmailFormat' : 'فرمت ایمیل اشتباه است.',
-          'MsgChar' : 'تعداد کاراکترهای پیام شما باید بیشتر از 30 باشد.'
+          'MsgChar' : 'تعداد کاراکترهای پیام شما باید بیشتر از 30 باشد.',
+          'Load More' : 'بارگذاری بیشتر'
 
 
     },

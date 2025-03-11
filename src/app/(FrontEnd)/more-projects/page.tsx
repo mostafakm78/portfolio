@@ -3,7 +3,7 @@ import IndexMore from '@/components/templates/moreProjects/index/Index';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'صفحه پروژه ها',
+  title: 'Works',
   description: 'my personal portfolio website',
   icons: '/images/PhotoIphone.png',
 };

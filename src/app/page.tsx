@@ -6,7 +6,7 @@ import Works from '@/components/templates/HomePage/works/Works';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'به سایت من خوش اومدی :)',
+  title: 'Welcome to my Portfolio :)',
   description: 'my personal portfolio website',
   icons: '/images/PhotoIphone.png',
 };
