@@ -92,7 +92,14 @@ const SearchComponent = () => {
       ) : (
         <div className="mt-10 flex flex-col items-center">
           <p className="text-red-700 text-3xl lg:text-5xl">{t('Sorry')}</p>
-          <button className="text-back dark:text-fore hover:opacity-70 duration-300 hover:animate-bounce text-xl lg:text-3xl mt-5" onClick={() => router.push('/more-projects')}>
+          <button
+            className="text-back dark:text-fore hover:opacity-70 duration-300 hover:animate-bounce text-xl lg:text-3xl mt-5"
+            onClick={() => {
+              setSearchTerm(''); 
+              setFinalSearchTerm('');
+              router.push('/more-projects');
+            }}
+          >
             {t('Try')}
           </button>
         </div>
