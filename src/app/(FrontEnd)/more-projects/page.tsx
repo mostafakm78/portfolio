@@ -1,4 +1,4 @@
-import FadeInSection from '@/components/common/FadeInSection';
+
 import NavbarComponentCompact from '@/components/templates/moreProjects/header/NavbarCompact';
 import IndexMore from '@/components/templates/moreProjects/index/Index';
 import { Metadata } from 'next';
