@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from '@heroui/react';
 import { useState } from 'react';
 import { FaGithub, FaMoon, FaSun } from 'react-icons/fa';
-import { TbArrowBack } from 'react-icons/tb';
+
 
 export default function NavbarComponentCompact() {
   const { t, i18n } = useTranslation();
