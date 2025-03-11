@@ -83,7 +83,7 @@ const SearchComponent = () => {
 
           {visibleCount < filteredProjects.length && (
             <div className="mt-10">
-              <button onClick={handleLoadMore} className="px-6 py-2 bg-back text-black rounded-lg hover:opacity-75 dark:bg-fore dark:text-white transition">
+              <button onClick={handleLoadMore} className="px-6 py-2 bg-back text-fore dark:bg-fore dark:text-back rounded-lg hover:opacity-75 transition">
                 {t('Load More')}
               </button>
             </div>
