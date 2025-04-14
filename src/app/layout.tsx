@@ -1,4 +1,5 @@
-
+'use client';
+import '../helpers/i18n';
 import ScrollToTop from '@/helpers/ScrollToTop';
 import './globals.css';
 
@@ -8,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa">
+    <html >
       <body className="bg-fore dark:bg-back">
         {children}
         <ScrollToTop />

@@ -1,9 +1,10 @@
+
 import NavbarComponentCompact from '@/components/templates/moreProjects/header/NavbarCompact';
 import IndexMore from '@/components/templates/moreProjects/index/Index';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'صفحه پروژه ها',
+  title: 'Works',
   description: 'my personal portfolio website',
   icons: '/images/PhotoIphone.png',
 };
@@ -12,7 +13,7 @@ export default function MoreProjects() {
   return (
     <>
       <NavbarComponentCompact />
-      <IndexMore />
+        <IndexMore />
     </>
   );
 }

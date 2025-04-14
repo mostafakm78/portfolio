@@ -1,3 +1,5 @@
+'use client'
+import { useTranslation } from 'react-i18next';
 import {
   Modal,
   ModalContent,
@@ -13,6 +15,7 @@ interface photos {
 }
 
 export default function PhotoModal({ photos }: photos) {
+    const { t } = useTranslation();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
@@ -21,7 +24,7 @@ export default function PhotoModal({ photos }: photos) {
         onPress={onOpen}
         className="rounded-md bg-transparent hover:opacity-85 duration-300 text-fore dark:text-back"
       >
-        مشاهده عکس ها
+        {t('Photos')}
       </Button>
       <Modal
         hideCloseButton={true}
@@ -36,7 +39,7 @@ export default function PhotoModal({ photos }: photos) {
         <ModalContent>
           <>
             <ModalHeader className="flex flex-col gap-1">
-              مشاهده عکس ها
+              {t('Photos')}
             </ModalHeader>
             <ModalBody className='w-full'>
               <SingleCard photos={photos} />
