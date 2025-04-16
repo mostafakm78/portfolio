@@ -37,39 +37,15 @@
       "tech": ["JavaScript", "Css", "Html"]
     },
     {
-      "name": "پیام popup",
-      "src": "https://mostafakm78.github.io/Popup-Massege-js/",
-      "photos": ["/images/projects/PopUp/1-PopUp.png", "/images/projects/PopUp/2-PopUp.png"],
-      "tech": ["JavaScript", "Css", "Html"]
-    },
-    {
       "name": "ساخت بارکد با API",
       "src": "https://mostafakm78.github.io/QR-code-Js/",
       "photos": ["/images/projects/QrCode/1-QrCode.png", "/images/projects/QrCode/2-QrCode.png"],
       "tech": ["JavaScript", "Css", "Html"]
     },
     {
-      "name": "منوی DropDown ساده",
-      "src": "https://mostafakm78.github.io/simple-Menu-Js/",
-      "photos": ["/images/projects/DropDown/1-DropDown.png", "/images/projects/DropDown/2-DropDown.png"],
-      "tech": ["Css", "Html"]
-    },
-    {
-      "name": "پاک کردن پس زمینه تصویر",
-      "src": "https://mostafakm78.github.io/image-background-remove/",
-      "photos": ["/images/projects/BackImgRem/1-BackImgRem.png", "/images/projects/BackImgRem/2-BackImgRem.png", "/images/projects/BackImgRem/3-BackImgRem.png"],
-      "tech": ["JavaScript", "Css", "Html"]
-    },
-    {
       "name": "محاسبه سن",
       "src": "https://mostafakm78.github.io/Age-calculation-Js/",
       "photos": ["/images/projects/AgeCalc/1-AgeCalc.png", "/images/projects/AgeCalc/2-AgeCalc.png"],
-      "tech": ["JavaScript", "Css", "Html"]
-    },
-    {
-      "name": "اسلایدر",
-      "src": "https://mostafakm78.github.io/Slider-Js/",
-      "photos": ["/images/projects/Slider/1-Slider.png", "/images/projects/Slider/2-Slider.png"],
       "tech": ["JavaScript", "Css", "Html"]
     },
     {
@@ -122,6 +98,32 @@
       "src": "https://github.com/mostafakm78/Portfolio_template",
       "photos": ["/images/projects/PortFolioTempalte/PortFolioTempalte-1.png", "/images/projects/PortFolioTempalte/PortFolioTempalte-2.png", "/images/projects/PortFolioTempalte/PortFolioTempalte-3.png", "/images/projects/PortFolioTempalte/PortFolioTempalte-4.png"],
       "tech": ["React", "Css", "Html", "JavaScript"]
+    },
+    {
+      "name": "صفحه اصلی فروشگاهی رسپانسیو",
+      "src": "https://mostafakm78.github.io/Shop-site-without-javascript/",
+      "photos": ["/images/projects/ShopPage/1-ShopPage.png", "/images/projects/ShopPage/2-ShopPage.png", "/images/projects/ShopPage/3-ShopPage.png", "/images/projects/ShopPage/4-ShopPage.png", "/images/projects/ShopPage/5-ShopPage.png"],
+      "tech": ["Css", "Html"]
+    },
+    {
+      "name": "نمونه بازطراحی شده وبسایت ست کافی",
+      "src": "https://github.com/mostafakm78/coffeeset",
+      "link": "https://setcoffee-shop.ir/",
+      "photos": [
+        "/images/projects/SetCoffee/1-SetCoffee.png",
+        "/images/projects/SetCoffee/2-SetCoffee.png",
+        "/images/projects/SetCoffee/3-SetCoffee.png",
+        "/images/projects/SetCoffee/4-SetCoffee.png",
+        "/images/projects/SetCoffee/5-SetCoffee.png",
+        "/images/projects/SetCoffee/6-SetCoffee.png",
+        "/images/projects/SetCoffee/7-SetCoffee.png",
+        "/images/projects/SetCoffee/8-SetCoffee.png",
+        "/images/projects/SetCoffee/9-SetCoffee.png",
+        "/images/projects/SetCoffee/10-SetCoffee.png",
+        "/images/projects/SetCoffee/11-SetCoffee.png",
+        "/images/projects/SetCoffee/12-SetCoffee.png"
+      ],
+      "tech": ["React", "Css", "Html", "Next", "mongoose", "توضیحات :‌ نمونه کامل بازطراحی شده وب سایت ست کافی همراه با بک اند و قابلیت ثبت نام و ورود به پنل ادمین و کاربری و افزودن محصول جدید و افزودن محصول به سبد خرید و البته رسپانسیو :)"]
     }
   ]
 }
