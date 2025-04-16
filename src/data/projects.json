@@ -115,6 +115,13 @@
       "src": "https://mostafakm78.github.io/Jonas_project/",
       "photos": ["/images/projects/Jonas/1-Jonas.png", "/images/projects/Jonas/2-Jonas.png", "/images/projects/Jonas/3-Jonas.png", "/images/projects/Jonas/4-Jonas.png", "/images/projects/Jonas/5-Jonas.png"],
       "tech": ["JavaScript", "Css", "Html"]
+    },
+    {
+      "name": "PortFolio Tempalte",
+      "link": "https://portfolio-template-gamma-three.vercel.app/",
+      "src": "https://github.com/mostafakm78/Portfolio_template",
+      "photos": ["/images/projects/PortFolioTempalte/PortFolioTempalte-1.png", "/images/projects/PortFolioTempalte/PortFolioTempalte-2.png", "/images/projects/PortFolioTempalte/PortFolioTempalte-3.png", "/images/projects/PortFolioTempalte/PortFolioTempalte-4.png"],
+      "tech": ["React", "Css", "Html", "JavaScript"]
     }
   ]
 }
