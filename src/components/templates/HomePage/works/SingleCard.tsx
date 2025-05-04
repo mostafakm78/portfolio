@@ -25,8 +25,8 @@ export default function SingleCard({ photos }: photo) {
               <Image
                 src={photo}
                 alt="Slide image"
-                layout="fill"
-                objectFit="center"
+                layout='fill'
+                objectFit="contain"
                 className="rounded-md"
                 quality={100}
               />

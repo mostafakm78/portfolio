@@ -124,6 +124,13 @@
         "/images/projects/SetCoffee/12-SetCoffee.png"
       ],
       "tech": ["React", "Css", "Html", "Next", "mongoose", "توضیحات :‌ نمونه کامل بازطراحی شده وب سایت ست کافی همراه با بک اند و قابلیت ثبت نام و ورود به پنل ادمین و کاربری و افزودن محصول جدید و افزودن محصول به سبد خرید و البته رسپانسیو :)"]
+    },
+    {
+      "name": "بازطراحی سایت زودفیکس با json server",
+      "src": "https://github.com/mostafakm78/zoodfix",
+      "link": "https://zoodfix.vercel.app/",
+      "photos": ["/images/projects/Zoodfix/1-Zoodfix.png", "/images/projects/Zoodfix/2-Zoodfix.png", "/images/projects/Zoodfix/3-Zoodfix.png", "/images/projects/Zoodfix/4-Zoodfix.png", "/images/projects/Zoodfix/5-Zoodfix.png"],
+      "tech": ["React", "TailWind", "Html", "Next", "json-server", "Typescript", "نمونه باز طراحی شده سایت زودفیکس که قسمت هایی از دیتابیس و بک اند با json server به صورت تستی انجام شده و دیتا رو از سرور میگیره"]
     }
   ]
 }
