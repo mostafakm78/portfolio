@@ -95,7 +95,7 @@ const SearchComponent = () => {
           <button
             className="text-back dark:text-fore hover:opacity-70 duration-300 hover:animate-bounce text-xl lg:text-3xl mt-5"
             onClick={() => {
-              setSearchTerm(''); 
+              setSearchTerm('');
               setFinalSearchTerm('');
               router.push('/more-projects');
             }}

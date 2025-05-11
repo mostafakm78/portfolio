@@ -1,8 +1,13 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import MoreAboutMe from './MoreAboutMe';
-import React from 'react';
+import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const apps = [
   { key: 'tailwind', src: '/images/tailwind-css-icon.png', name: 'TailWind' },
@@ -38,47 +43,84 @@ interface App {
 }
 
 export default function AboutMe() {
-    const { t , i18n } = useTranslation();
+  const container = useRef(null);
+  const { t, i18n } = useTranslation();
+
+  useGSAP(
+    () => {
+
+      let lastScroll = window.scrollY;
+
+      ScrollTrigger.create({
+        trigger: '.title',
+        start: 'top bottom',
+        end: 'bottom top',
+        onUpdate: () => {
+          const currentScroll = window.scrollY;
+          const direction = currentScroll > lastScroll ? 'down' : 'up';
+          lastScroll = currentScroll;
+
+          gsap.to('.title', {
+            y: direction === 'down' ? -20 : 10,
+            duration: 0.5,
+            ease: 'power2.out',
+          });
+        },
+      });
+
+      gsap.set('.about', { opacity: 1 });
+      gsap.from('.about', {
+        scrollTrigger: {
+          trigger: '.about-hero',
+          start: 'bottom bottom',
+          toggleActions: 'play none none none',
+          once: true,
+        },
+        opacity: 0,
+        x: 1000,
+        duration: 1,
+        ease: 'power2.out',
+        delay: 0.3,
+      });
+
+      gsap.set('.skills', { opacity: 1 });
+
+        gsap.from('.skills', {
+          scrollTrigger: {
+            trigger: '.skills-hero',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+            once: true,
+          },
+          opacity: 0,
+          x: 1000,
+          duration: 1,
+          delay: 0.3,
+          ease: 'power2.out',
+        });
+    },
+    { scope: container }
+  );
+
   return (
-    <div
-    dir={i18n.language === 'fa' ? 'rtl' : 'ltr'}
-      id="about-me"
-      className="flex flex-col px-10 justify-center items-center"
-    >
+    <div ref={container} dir={i18n.language === 'fa' ? 'rtl' : 'ltr'} id="about-me" className="flex flex-col px-10 justify-center items-center">
       <div className="flex bg-fore w-full gap-10 justify-center items-center mt-5 dark:bg-back">
-        <span className="lg:text-4xl text-2xl mt-4 text-back dark:text-fore">
-          {t('About Me')}
-        </span>
+        <span className="title inline-block lg:text-4xl text-2xl mt-4 text-back dark:text-fore">{t('About Me')}</span>
         <div className="lg:w-2/3 w-2/4 border-[1px] opacity-50 rounded-lg bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
       </div>
-      <div className="mt-10 mb-5 lg:mb-0 lg:w-8/12 w-full">
-        <span className="text-back dark:text-fore">
-          {t('About Me short')}
-        </span>
+      <div className="about-hero mt-10 mb-5 lg:mb-0 lg:w-8/12 w-full">
+        <span className="about inline-block text-back dark:text-fore">{t('About Me short')}</span>
       </div>
       <MoreAboutMe />
       <div className="flex bg-fore w-full gap-10 justify-center items-center mt-5 dark:bg-back">
-        <span className="lg:text-4xl text-2xl mt-4 text-back dark:text-fore">
-          {t('Skills')}
-        </span>
+        <span className="title inline-block lg:text-4xl text-2xl mt-4 text-back dark:text-fore">{t('Skills')}</span>
         <div className="lg:w-2/3 w-2/4 border-[1px] opacity-50 rounded-lg bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
       </div>
-      <div className="mt-10 grid lg:grid-cols-6 grid-cols-2 px-10 gap-8 justify-center items-center">
+      <div className="skills-hero mt-10 grid lg:grid-cols-6 grid-cols-2 px-10 gap-8 justify-center items-center">
         {apps.map((app: App) => (
-          <div
-            key={app.key}
-            className="flex flex-col justify-center items-center rounded-xl shadow-md bg-back dark:bg-fore p-3"
-          >
-            <Image
-              className="w-24"
-              width={800}
-              height={800}
-              alt={app.name}
-              src={app.src}
-            />
-            <span className="font-sans text-fore text-[12px] lg:text-base dark:text-back ">
-              {app.name}
-            </span>
+          <div key={app.key} className="skills flex flex-col justify-center items-center rounded-xl shadow-md bg-back dark:bg-fore p-3">
+            <Image className="w-24" width={800} height={800} alt={app.name} src={app.src} />
+            <span className="font-sans text-fore text-[12px] lg:text-base dark:text-back ">{app.name}</span>
           </div>
         ))}
       </div>
