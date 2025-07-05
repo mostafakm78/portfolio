@@ -100,12 +100,6 @@
       "tech": ["React", "Css", "Html", "JavaScript"]
     },
     {
-      "name": "صفحه اصلی فروشگاهی رسپانسیو",
-      "src": "https://mostafakm78.github.io/Shop-site-without-javascript/",
-      "photos": ["/images/projects/ShopPage/1-ShopPage.png", "/images/projects/ShopPage/2-ShopPage.png", "/images/projects/ShopPage/3-ShopPage.png", "/images/projects/ShopPage/4-ShopPage.png", "/images/projects/ShopPage/5-ShopPage.png"],
-      "tech": ["Css", "Html"]
-    },
-    {
       "name": "نمونه بازطراحی شده وبسایت ست کافی",
       "src": "https://github.com/mostafakm78/coffeeset",
       "link": "https://setcoffee-shop.ir/",
@@ -131,6 +125,25 @@
       "link": "https://zoodfix.vercel.app/",
       "photos": ["/images/projects/Zoodfix/1-Zoodfix.png", "/images/projects/Zoodfix/2-Zoodfix.png", "/images/projects/Zoodfix/3-Zoodfix.png", "/images/projects/Zoodfix/4-Zoodfix.png", "/images/projects/Zoodfix/5-Zoodfix.png"],
       "tech": ["React", "TailWind", "Html", "Next", "json-server", "Typescript", "نمونه باز طراحی شده سایت زودفیکس که قسمت هایی از دیتابیس و بک اند با json server به صورت تستی انجام شده و دیتا رو از سرور میگیره"]
+    },
+    {
+      "name": "سایت پخش کننده صداهای آرامشبخش SoftSound",
+      "src": "https://github.com/mostafakm78/murmur-sounds-web",
+      "link": "https://softsound.vercel.app",
+      "photos": [
+        "/images/projects/SoftSound/1-SoftSound.png",
+        "/images/projects/SoftSound/2-SoftSound.png",
+        "/images/projects/SoftSound/3-SoftSound.png",
+        "/images/projects/SoftSound/4-SoftSound.png",
+        "/images/projects/SoftSound/5-SoftSound.png",
+        "/images/projects/SoftSound/6-SoftSound.png",
+        "/images/projects/SoftSound/7-SoftSound.png",
+        "/images/projects/SoftSound/8-SoftSound.png",
+        "/images/projects/SoftSound/9-SoftSound.png",
+        "/images/projects/SoftSound/10-SoftSound.png",
+        "/images/projects/SoftSound/11-SoftSound.png"
+      ],
+      "tech": ["React", "TailWind", "Html", "Next", "ShadCn", "Typescript", "اولین پروژه که بازنویسی از سایت یا صفحه دیگه ای نیست ، برای گوش دادن به صداهای آرامشبخش طبیعت همراه با امکاناتی مثل زمانبدی و ..."]
     }
   ]
 }
