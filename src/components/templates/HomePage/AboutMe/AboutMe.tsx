@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Button } from '@heroui/react';
+import Link from 'next/link';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -48,7 +50,6 @@ export default function AboutMe() {
 
   useGSAP(
     () => {
-
       let lastScroll = window.scrollY;
 
       ScrollTrigger.create({
@@ -85,19 +86,19 @@ export default function AboutMe() {
 
       gsap.set('.skills', { opacity: 1 });
 
-        gsap.from('.skills', {
-          scrollTrigger: {
-            trigger: '.skills-hero',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-            once: true,
-          },
-          opacity: 0,
-          x: 1000,
-          duration: 1,
-          delay: 0.3,
-          ease: 'power2.out',
-        });
+      gsap.from('.skills', {
+        scrollTrigger: {
+          trigger: '.skills-hero',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+          once: true,
+        },
+        opacity: 0,
+        x: 1000,
+        duration: 1,
+        delay: 0.3,
+        ease: 'power2.out',
+      });
     },
     { scope: container }
   );
@@ -111,7 +112,12 @@ export default function AboutMe() {
       <div className="about-hero mt-10 mb-5 lg:mb-0 lg:w-8/12 w-full">
         <span className="about inline-block text-back dark:text-fore">{t('About Me short')}</span>
       </div>
-      <MoreAboutMe />
+      <div className="flex justify-around w-full">
+        <Link href="/MostafaKamari-Resume .pdf" download>
+          <Button className="rounded-md hover:opacity-85 mt-6 duration-300 bg-back text-fore dark:bg-fore dark:text-back">{t('Download Resume')}</Button>
+        </Link>
+        <MoreAboutMe />
+      </div>
       <div className="flex bg-fore w-full gap-10 justify-center items-center mt-5 dark:bg-back">
         <span className="title inline-block lg:text-4xl text-2xl mt-4 text-back dark:text-fore">{t('Skills')}</span>
         <div className="lg:w-2/3 w-2/4 border-[1px] opacity-50 rounded-lg bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
