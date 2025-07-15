@@ -14,7 +14,6 @@ export function ClientOnly({ children }: { children: ReactNode }) {
     return (
       <div className="flex justify-center text-2xl lg:text-4xl items-center h-screen text-background bg-fore dark:bg-back gap-2">
         <AiOutlineLoading className="animate-spin" />
-        در حال بارگذاری...
       </div>
     );
   }

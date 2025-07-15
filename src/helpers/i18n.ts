@@ -61,7 +61,8 @@ I hope to continue this journey with more learning and experiences and create am
           'EmailFormat' : 'The email format is incorrect.',
           'MsgChar' : 'Your message must be longer than 30 characters.',
             'Load More' : 'Load More',
-            'Download Resume' : 'Download Resume'
+            'Download Resume' : 'Download Resume',
+            'Loading' : 'Loading...'
     },
   },
   fa: {
@@ -134,7 +135,8 @@ I hope to continue this journey with more learning and experiences and create am
           'EmailFormat' : 'فرمت ایمیل اشتباه است.',
           'MsgChar' : 'تعداد کاراکترهای پیام شما باید بیشتر از 30 باشد.',
           'Load More' : 'بارگذاری بیشتر',
-          'Download Resume' : 'دانلود رزومه'
+          'Download Resume' : 'دانلود رزومه',
+          'Loading' : 'در حال بارگذاری ...'
 
 
     },
