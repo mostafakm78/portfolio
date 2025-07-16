@@ -61,26 +61,6 @@
       "tech": ["JavaScript", "Css", "Html"]
     },
     {
-      "name": "داشبورد تمرینی",
-      "src": "https://github.com/mostafakm78/simple_shop_dashbord",
-      "photos": ["/images/projects/Dashboard/1-Dashboard.png", "/images/projects/Dashboard/2-Dashboard.png", "/images/projects/Dashboard/3-Dashboard.png", "/images/projects/Dashboard/4-Dashboard.png"],
-      "tech": ["React", "Css", "Next", "Html"]
-    },
-    {
-      "name": "سایت کافه با سرور مجازی json-placeholder",
-      "src": "https://github.com/mostafakm78/coffe_shop_full_site",
-      "photos": [
-        "/images/projects/HotCoffee/1-HotCoffee.png",
-        "/images/projects/HotCoffee/2-HotCoffee.png",
-        "/images/projects/HotCoffee/3-HotCoffee.png",
-        "/images/projects/HotCoffee/4-HotCoffee.png",
-        "/images/projects/HotCoffee/5-HotCoffee.png",
-        "/images/projects/HotCoffee/6-HotCoffee.png",
-        "/images/projects/HotCoffee/7-HotCoffee.png"
-      ],
-      "tech": ["React", "Css", "Next", "Html"]
-    },
-    {
       "name": "To Do List با API",
       "src": "https://github.com/mostafakm78/Todo-list-react",
       "photos": ["/images/projects/TodoReact/1-TodoReact.png", "/images/projects/TodoReact/2-TodoReact.png", "/images/projects/TodoReact/3-TodoReact.png", "/images/projects/TodoReact/4-TodoReact.png", "/images/projects/TodoReact/5-TodoReact.png"],
