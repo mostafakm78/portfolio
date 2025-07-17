@@ -9,7 +9,7 @@ const resources = {
       'Mostafa Kamari': 'Mostafa Kamari',
       'Home Page': 'Home Page',
       'About Me': 'About Me',
-      'Resume': 'Resume',
+      'Resume': 'Projects',
       'Contact Me': 'Contact Me',
       'Hello , Im Mostafa': 'Hello , Im Mostafa',
       'About Me short':
@@ -70,7 +70,7 @@ I hope to continue this journey with more learning and experiences and create am
       'Mostafa Kamari': 'مصطفی کمری',
       'Home Page': 'صفحه اصلی',
       'About Me': 'درباره من',
-      'Resume': 'رزومه',
+      'Resume': 'پروژه ها',
       'Contact Me': 'تماس با من',
       'Hello , Im Mostafa': 'سلام من مصطفی هستم',
       'About Me short':

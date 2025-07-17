@@ -7,12 +7,6 @@
       "tech": ["JavaScript", "TailWind", "Html"]
     },
     {
-      "name": "صفحه اصلی فروشگاهی رسپانسیو",
-      "src": "https://mostafakm78.github.io/Shop-site-without-javascript/",
-      "photos": ["/images/projects/ShopPage/1-ShopPage.png", "/images/projects/ShopPage/2-ShopPage.png", "/images/projects/ShopPage/3-ShopPage.png", "/images/projects/ShopPage/4-ShopPage.png", "/images/projects/ShopPage/5-ShopPage.png"],
-      "tech": ["Css", "Html"]
-    },
-    {
       "name": "نمونه بازطراحی شده وبسایت ست کافی",
       "src": "https://github.com/mostafakm78/coffeeset",
       "link": "https://setcoffee-shop.ir/",
