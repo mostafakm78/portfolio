@@ -12,6 +12,7 @@ This is my personal portfolio website, built with [Next.js](https://nextjs.org),
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com)
+- [SdadCn](https://ui.shadcn.com/)
 
 ---
 
@@ -29,7 +30,7 @@ npm run dev
 Then open your browser and go to: http://localhost:3000
 Start editing the main page at src/app/page.tsx.
 
-📁 Project Structure
+## 📁 Project Structure
 
 .
 
@@ -41,20 +42,20 @@ Start editing the main page at src/app/page.tsx.
 ├── tailwind.config.ts # Tailwind configuration
 ├── tsconfig.json # TypeScript configuration
 
-🧠 Features
+## 🧠 Features
 ⚡ Fast, responsive, and mobile-friendly UI
 🧩 Built with reusable components
 🛠️ Type-safe codebase with TypeScript
 🌐 Deployed on Vercel
 
-🛠️ Deployment
+## 🛠️ Deployment
 This project is deployed on Vercel.
 To deploy your own version:
 Push your project to GitHub
 Connect your repo to Vercel
 Choose the root directory and deploy
 
-🙋‍♂️ About Me
+## 🙋‍♂️ About Me
 I’m a passionate front-end developer interested in building clean, user-friendly, and high-performance web applications.
 📫 Reach me at: LinkedIn (if available)
 📁 Portfolio: portfolio-immostafakamari.vercel.app
