@@ -58,6 +58,6 @@ Choose the root directory and deploy
 ## 🙋‍♂️ About Me
 I’m a passionate front-end developer interested in building clean, user-friendly, and high-performance web applications.
 📫 Reach me at: LinkedIn (if available)
-📁 Portfolio: portfolio-immostafakamari.vercel.app
+📁 Portfolio: [portfolio-immostafakamari.vercel.app](https://portfolio-immostafakamari.vercel.app/)
 
 If you like this project, feel free to star the repository and share it with others!
