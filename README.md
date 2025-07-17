@@ -12,7 +12,7 @@ This is my personal portfolio website, built with [Next.js](https://nextjs.org),
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com)
-- [SdadCn](https://ui.shadcn.com/)
+- [HeroUI](https://www.heroui.com/)
 
 ---
 
