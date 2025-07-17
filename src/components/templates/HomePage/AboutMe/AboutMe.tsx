@@ -113,7 +113,7 @@ export default function AboutMe() {
         <span className="about inline-block text-back dark:text-fore">{t('About Me short')}</span>
       </div>
       <div className="flex justify-around w-full">
-        <Link href="/MostafaKamari-Resume .pdf" download>
+        <Link href="/MostafaKamari-Resume.pdf" download>
           <Button className="rounded-md hover:opacity-85 mt-6 duration-300 bg-back text-fore dark:bg-fore dark:text-back">{t('Download Resume')}</Button>
         </Link>
         <MoreAboutMe />
