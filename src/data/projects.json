@@ -51,6 +51,22 @@
         "/images/projects/SoftSound/11-SoftSound.png"
       ],
       "tech": ["React", "TailWind", "Html", "Next", "ShadCn", "Typescript", "اولین پروژه که بازنویسی از سایت یا صفحه دیگه ای نیست ، برای گوش دادن به صداهای آرامشبخش طبیعت همراه با امکاناتی مثل زمانبدی و ..."]
+    },
+    {
+      "name": "سایت کپسول",
+      "src": "https://github.com/mostafakm78/Capsule",
+      "link": "https://www.capsule-memo.ir",
+      "photos": [
+        "/images/projects/Capsule/3-Capsule.png",
+        "/images/projects/Capsule/1-Capsule.png",
+        "/images/projects/Capsule/2-Capsule.png",
+        "/images/projects/Capsule/4-Capsule.png",
+        "/images/projects/Capsule/5-Capsule.png",
+        "/images/projects/Capsule/6-Capsule.png",
+        "/images/projects/Capsule/7-Capsule.png",
+        "/images/projects/Capsule/8-Capsule.png"
+      ],
+      "tech": ["React", "TailWind", "Html", "Next", "ShadCn", "Typescript", "Gsap" , "Axios" , "React Hook Form" , "خاطراتت رو با صدا، تصویر یا نوشته درون یک کپسول قرار بده، زمان باز شدنش رو مشخص کن، و بذار بمونه... تا روزی که برگردی و دوباره بخونیش. برای خودت، برای یه عزیز، یا شاید برای کسی که هنوز پیداش نکردی."]
     }
   ]
 }

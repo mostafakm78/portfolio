@@ -14,7 +14,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const apps = [
   { key: 'tailwind', src: '/images/tailwind-css-icon.png', name: 'TailWind' },
   { key: 'Css', src: '/images/css-icon.png', name: 'Css' },
-  { key: 'Figma', src: '/images/figma-icon.png', name: 'Figma' },
+  { key: 'Gsap', src: '/images/Gsap.png', name: 'Gsap' },
   { key: 'Html', src: '/images/html-icon.png', name: 'Html' },
   {
     key: 'JavaScript',
@@ -30,11 +30,11 @@ const apps = [
   { key: 'Redux', src: '/images/redux-icon.png', name: 'Redux' },
   { key: 'Sass', src: '/images/sass-icon.png', name: 'Sass' },
   {
-    key: 'VSCode',
-    src: '/images/visual-studio-code-icon.png',
-    name: 'VS Code',
+    key: 'Docker',
+    src: '/images/docker-icon.png',
+    name: 'Docker',
   },
-  { key: 'HeroUI', src: '/images/isotipo.png', name: 'HeroUI' },
+  { key: 'ShadCn', src: '/images/shadcn-ui.png', name: 'ShadCn' },
   { key: 'React', src: '/images/react-js-icon.png', name: 'React' },
 ];
 
