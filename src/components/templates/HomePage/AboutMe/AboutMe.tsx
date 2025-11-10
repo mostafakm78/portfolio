@@ -14,7 +14,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const apps = [
   { key: 'tailwind', src: '/images/tailwind-css-icon.png', name: 'TailWind' },
   { key: 'Css', src: '/images/css-icon.png', name: 'Css' },
-  { key: 'Gsap', src: '/images/Gsap.png', name: 'Gsap' },
+  { key: 'Gsap', src: '/images/gsap.png', name: 'Gsap' },
   { key: 'Html', src: '/images/html-icon.png', name: 'Html' },
   {
     key: 'JavaScript',
