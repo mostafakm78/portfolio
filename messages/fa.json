@@ -1,0 +1,9 @@
+{
+    "Common" : {
+        "language" : {
+            "fa" : "فارسی",
+            "en" : "English"
+        },
+        "switch" : "تغییر زبان"
+    }
+}

@@ -1,9 +1,6 @@
 
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector'
 
-const resources = {
+export const resources = {
   en: {
     translation: {
       'Mostafa Kamari': 'Mostafa Kamari',
@@ -142,13 +139,3 @@ I hope to continue this journey with more learning and experiences and create am
     },
   },
 };
-
-i18n.use(LanguageDetector).use(initReactI18next).init({
-  resources,
-  fallbackLng: 'fa',
-  interpolation: {
-    escapeValue: false,
-  },
-});
-
-export default i18n;

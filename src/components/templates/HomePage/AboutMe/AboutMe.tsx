@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import MoreAboutMe from './MoreAboutMe';
 import React, { useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -46,7 +45,6 @@ interface App {
 
 export default function AboutMe() {
   const container = useRef(null);
-  const { t, i18n } = useTranslation();
 
   useGSAP(
     () => {
@@ -104,22 +102,22 @@ export default function AboutMe() {
   );
 
   return (
-    <div ref={container} dir={i18n.language === 'fa' ? 'rtl' : 'ltr'} id="about-me" className="flex flex-col px-10 justify-center items-center">
+    <div ref={container} id="about-me" className="flex flex-col px-10 justify-center items-center">
       <div className="flex bg-fore w-full gap-10 justify-center items-center mt-5 dark:bg-back">
-        <span className="title inline-block lg:text-4xl text-2xl mt-4 text-back dark:text-fore">{t('About Me')}</span>
+        <span className="title inline-block lg:text-4xl text-2xl mt-4 text-back dark:text-fore">{('About Me')}</span>
         <div className="lg:w-2/3 w-2/4 border-[1px] opacity-50 rounded-lg bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
       </div>
       <div className="about-hero mt-10 mb-5 lg:mb-0 lg:w-8/12 w-full">
-        <span className="about inline-block text-back dark:text-fore">{t('About Me short')}</span>
+        <span className="about inline-block text-back dark:text-fore">{('About Me short')}</span>
       </div>
       <div className="flex justify-around w-full">
         <Link href="/MostafaKamari-Resume.pdf" download>
-          <Button className="rounded-md hover:opacity-85 mt-6 duration-300 bg-back text-fore dark:bg-fore dark:text-back">{t('Download Resume')}</Button>
+          <Button className="rounded-md hover:opacity-85 mt-6 duration-300 bg-back text-fore dark:bg-fore dark:text-back">{('Download Resume')}</Button>
         </Link>
         <MoreAboutMe />
       </div>
       <div className="flex bg-fore w-full gap-10 justify-center items-center mt-5 dark:bg-back">
-        <span className="title inline-block lg:text-4xl text-2xl mt-4 text-back dark:text-fore">{t('Skills')}</span>
+        <span className="title inline-block lg:text-4xl text-2xl mt-4 text-back dark:text-fore">{('Skills')}</span>
         <div className="lg:w-2/3 w-2/4 border-[1px] opacity-50 rounded-lg bg-back dark:bg-fore border-back dark:border-fore h-[1px]"></div>
       </div>
       <div className="skills-hero mt-10 grid lg:grid-cols-6 grid-cols-2 px-10 gap-8 justify-center items-center">
