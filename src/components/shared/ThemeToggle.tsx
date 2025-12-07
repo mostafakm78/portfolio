@@ -60,7 +60,7 @@ export function ThemeToggle() {
 
   return (
     <div ref={scope} className="inline-flex overflow-hidden">
-      <Button onClick={toggleTheme} variant="outline" size="icon" className="relative rounded-full border-none bg-background/80 dark:bg-background/80 cursor-pointer hover:bg-background/50 dark:hover:bg-background/50 text-foreground" aria-label="Toggle theme" title={`Theme: ${theme}`}>
+      <Button onClick={toggleTheme} variant="outline" className="relative border-none md:h-9 md:w-9 h-5 w-5 p-3.5 rounded-full shadow-none bg-background text-secondary cursor-pointer hover:bg-background/50" aria-label="Toggle theme" title={`Theme: ${theme}`}>
         <span ref={iconRef} className="inline-flex">
           {getIcon()}
         </span>

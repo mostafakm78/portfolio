@@ -1,13 +1,24 @@
 {
   "projects": [
     {
-      "name": "لندینگ پیج رسپانسیو",
+      "name": {
+        "fa": "لندینگ پیج رسپانسیو",
+        "en": "Responsive LandingPage"
+      },
       "src": "https://mostafakm78.github.io/LandingPage/",
       "photos": ["/images/projects/LandingPage/1-LandingPage.png", "/images/projects/LandingPage/2-LandingPage.png", "/images/projects/LandingPage/3-LandingPage.png", "/images/projects/LandingPage/4-LandingPage.png"],
-      "tech": ["JavaScript", "TailWind", "Html"]
+      "desc": {
+        "fa": "سایت لندینگ پیج ساده برای درک UI",
+        "en": "A simple landing page website for understanding UI"
+      },
+      "techtitle": ["JavaScript", "Tailwind CSS", "HTML"],
+      "tech": ["/images/javascript-programming-language-icon.png", "/images/tailwind-css-icon.png", "/images/html-icon.png"]
     },
     {
-      "name": "نمونه بازطراحی شده وبسایت ست کافی",
+      "name": {
+        "fa": "نمونه بازطراحی شده وبسایت ست کافی",
+        "en": "Redesigned example of Set Coffee website"
+      },
       "src": "https://github.com/mostafakm78/coffeeset",
       "link": "https://setcoffee-shop.ir/",
       "photos": [
@@ -24,17 +35,33 @@
         "/images/projects/SetCoffee/11-SetCoffee.png",
         "/images/projects/SetCoffee/12-SetCoffee.png"
       ],
-      "tech": ["React", "Css", "Html", "Next", "mongoose", "توضیحات :‌ نمونه کامل بازطراحی شده وب سایت ست کافی همراه با بک اند و قابلیت ثبت نام و ورود به پنل ادمین و کاربری و افزودن محصول جدید و افزودن محصول به سبد خرید و البته رسپانسیو :)"]
+      "desc": {
+        "fa": "توضیحات :‌ نمونه کامل بازطراحی شده وب سایت ست کافی همراه با بک اند و قابلیت ثبت نام و ورود به پنل ادمین و کاربری و افزودن محصول جدید و افزودن محصول به سبد خرید و البته رسپانسیو :)",
+        "en": "Description: A fully redesigned example of the Set Coffee website, complete with backend, user registration and login, admin and user panels, the ability to add new products, add products to the cart, and of course, fully responsive :)"
+      },
+      "techtitle": ["React js", "CSS", "HTML", "Next js"],
+      "tech": ["/images/react-js-icon.png", "/images/css-icon.png", "/images/html-icon.png", "/images/nextjs-icon.png"]
     },
     {
-      "name": "بازطراحی سایت زودفیکس با json server",
+      "name": {
+        "fa": "بازطراحی سایت زودفیکس با json server",
+        "en": "Redesign of ZoodFix website using JSON Server"
+      },
       "src": "https://github.com/mostafakm78/zoodfix",
       "link": "https://zoodfix.vercel.app/",
       "photos": ["/images/projects/Zoodfix/1-Zoodfix.png", "/images/projects/Zoodfix/2-Zoodfix.png", "/images/projects/Zoodfix/3-Zoodfix.png", "/images/projects/Zoodfix/4-Zoodfix.png", "/images/projects/Zoodfix/5-Zoodfix.png"],
-      "tech": ["React", "TailWind", "Html", "Next", "json-server", "Typescript", "نمونه باز طراحی شده سایت زودفیکس که قسمت هایی از دیتابیس و بک اند با json server به صورت تستی انجام شده و دیتا رو از سرور میگیره"]
+      "desc": {
+        "fa": "نمونه باز طراحی شده سایت زودفیکس که قسمت هایی از دیتابیس و بک اند با json server به صورت تستی انجام شده و دیتا رو از سرور میگیره",
+        "en": "Redesigned example of the ZoodFix website, where parts of the database and backend are implemented for testing using JSON Server, fetching data from the server."
+      },
+      "techtitle": ["React js", "Tailwind CSS", "HTML", "Next js", "TypeScript", "JavaScript"],
+      "tech": ["/images/react-js-icon.png", "/images/tailwind-css-icon.png", "/images/html-icon.png", "/images/nextjs-icon.png", "/images/typescript-programming-language-icon.png", "/images/javascript-programming-language-icon.png"]
     },
     {
-      "name": "سایت پخش کننده صداهای آرامشبخش SoftSound",
+      "name": {
+        "fa": "سایت پخش کننده صداهای آرامشبخش SoftSound",
+        "en": "SoftSound: A website for playing relaxing sounds"
+      },
       "src": "https://github.com/mostafakm78/murmur-sounds-web",
       "link": "https://softsound.vercel.app",
       "photos": [
@@ -50,10 +77,18 @@
         "/images/projects/SoftSound/10-SoftSound.png",
         "/images/projects/SoftSound/11-SoftSound.png"
       ],
-      "tech": ["React", "TailWind", "Html", "Next", "ShadCn", "Typescript", "اولین پروژه که بازنویسی از سایت یا صفحه دیگه ای نیست ، برای گوش دادن به صداهای آرامشبخش طبیعت همراه با امکاناتی مثل زمانبدی و ..."]
+      "desc": {
+        "fa": "اولین پروژه که بازنویسی از سایت یا صفحه دیگه ای نیست ، برای گوش دادن به صداهای آرامشبخش طبیعت همراه با امکاناتی مثل زمانبدی و ...",
+        "en": "The first project that is not a rewrite of another site or page, designed for listening to calming nature sounds with features like scheduling and more..."
+      },
+      "techtitle": ["React js", "Tailwind CSS", "HTML", "Next js", "GSAP", "TypeScript", "JavaScript"],
+      "tech": ["/images/react-js-icon.png", "/images/tailwind-css-icon.png", "/images/html-icon.png", "/images/nextjs-icon.png", "/images/gsap.png", "/images/typescript-programming-language-icon.png", "/images/javascript-programming-language-icon.png"]
     },
     {
-      "name": "سایت کپسول",
+      "name": {
+        "fa": "سایت کپسول",
+        "en": "Capsule Site"
+      },
       "src": "https://github.com/mostafakm78/Capsule",
       "link": "https://www.capsule-memo.ir",
       "photos": [
@@ -66,7 +101,12 @@
         "/images/projects/Capsule/7-Capsule.png",
         "/images/projects/Capsule/8-Capsule.png"
       ],
-      "tech": ["React", "TailWind", "Html", "Next", "ShadCn", "Typescript", "Gsap" , "Axios" , "React Hook Form" , "خاطراتت رو با صدا، تصویر یا نوشته درون یک کپسول قرار بده، زمان باز شدنش رو مشخص کن، و بذار بمونه... تا روزی که برگردی و دوباره بخونیش. برای خودت، برای یه عزیز، یا شاید برای کسی که هنوز پیداش نکردی."]
+      "desc": {
+        "fa": "خاطراتت رو با صدا، تصویر یا نوشته درون یک کپسول قرار بده، زمان باز شدنش رو مشخص کن، و بذار بمونه... تا روزی که برگردی و دوباره بخونیش. برای خودت، برای یه عزیز، یا شاید برای کسی که هنوز پیداش نکردی.",
+        "en": "Put your memories—through sound, image, or text—into a capsule, set the time for it to open, and let it stay... until the day you return to read it again. For yourself, for a loved one, or maybe for someone you haven't found yet."
+      },
+      "techtitle": ["GSAP", "Tailwind CSS", "React js", "Shadcn UI", "TypeScript", "Redux", "JavaScript", "Next js"],
+      "tech": ["/images/gsap.png", "/images/tailwind-css-icon.png", "/images/react-js-icon.png", "/images/shadcn-ui.png", "/images/typescript-programming-language-icon.png", "/images/redux-icon.png", "/images/javascript-programming-language-icon.png", "/images/nextjs-icon.png"]
     }
   ]
 }

@@ -55,15 +55,12 @@ export default function LocaleToggle() {
 
   return (
     <div ref={scope} className="overflow-hidden">
-        <Button onClick={handleToggle} variant="outline" size="icon" className="relative rounded-full border-none bg-background/80 dark:bg-background/80 cursor-pointer hover:bg-background/50 dark:hover:bg-background/50 text-foreground" aria-label="Toggle language" title={`Lang: ${locale}`}>
-          <span
-            ref={labelRef}
-            className="inline-flex items-center justify-center text-xs font-semibold select-none"
-          >
-            {locale === 'fa' ? 'FA' : 'EN'}
-          </span>
-          <span className="sr-only">{currentLabel}</span>
-        </Button>
+      <Button onClick={handleToggle} variant="outline" className="relative rounded-full border-none md:h-9 md:w-9 h-5 w-5 p-3.5 shadow-none bg-background cursor-pointer hover:bg-background/50 text-secondary" aria-label="Toggle language" title={`Lang: ${locale}`}>
+        <span ref={labelRef} className="inline-flex items-center justify-center text-xs font-semibold select-none">
+          {locale === 'fa' ? 'EN' : 'Fa'}
+        </span>
+        <span className="sr-only">{currentLabel}</span>
+      </Button>
     </div>
   );
 }
