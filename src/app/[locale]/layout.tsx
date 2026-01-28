@@ -43,7 +43,7 @@ export default async function LocaleLayout({
   const messages = await loadMessages(locale);
 
   return (
-    <html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'} suppressHydrationWarning>
+    <html lang={locale} dir='rtl' suppressHydrationWarning>
       <body className={` selection:bg-red-500 ${locale === 'fa' ? 'font-vazir' : 'font-stacksans'} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider locale={locale} messages={messages}>

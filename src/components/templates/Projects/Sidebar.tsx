@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { App, apps } from '../HomePage/Aboutme';
+import { App, apps } from '../MainSection/Aboutme';
 import Image from 'next/image';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useTranslations } from 'next-intl';
