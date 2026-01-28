@@ -1,9 +1,9 @@
-import HomePage from '@/components/templates/HomePage/Homepage';
+import MainSection from '@/components/templates/HomePage/Homepage';
 
 export default function Home() {
   return (
     <main>
-      <HomePage />
+      <MainSection />
     </main>
   );
 }
