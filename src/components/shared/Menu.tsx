@@ -25,8 +25,8 @@ const Menu: React.FC = () => {
     const ulRect = ulEl.getBoundingClientRect();
     const btnRect = activeEl.getBoundingClientRect();
 
-    lineEl.style.width = `${btnRect.width}px`;
-    lineEl.style.left = `${btnRect.left - ulRect.left}px`;
+    lineEl.style.width = `${btnRect.width + 20}px`;
+    lineEl.style.left = `${btnRect.left - ulRect.left - 10}px`;
   };
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Menu: React.FC = () => {
   }, [items.length, activeIndex]);
 
   return (
-    <ul ref={ulRef} className={`relative flex h-full w-1/2 items-center justify-around rounded-[30px] rounded-b-none bg-primary px-10 ${locale === 'fa' ? 'font-bold' : 'font-medium'}`}>
+    <ul ref={ulRef} className={`relative flex h-full text-lg w-1/2 text-foreground dark:text-background items-center justify-around rounded-[30px] rounded-b-none bg-primary px-10 ${locale === 'fa' ? 'font-bold' : 'font-medium'}`}>
       {items.map((item, index) => (
         <li key={item}>
           <button
@@ -58,7 +58,7 @@ const Menu: React.FC = () => {
           </button>
         </li>
       ))}
-      <div ref={lineRef} className="absolute bottom-0 h-1 bg-foreground transition-all duration-300" />
+      <div ref={lineRef} className="absolute bottom-0.5 h-1 bg-foreground dark:bg-background transition-all duration-300" />
     </ul>
   );
 };
