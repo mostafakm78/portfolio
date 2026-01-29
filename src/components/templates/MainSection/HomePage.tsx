@@ -1,6 +1,10 @@
 import Image from 'next/image';
-import Flash from '../../../../public/flash.svg';
 import { Button } from '@/components/ui/button';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import GlowButton from '@/components/shared/GlowButton';
+
+gsap.registerPlugin(useGSAP);
 
 const HomePage = () => {
   return (
@@ -36,8 +40,8 @@ const HomePage = () => {
           <h2 className="text-4xl font-light">توسعه دهنده جونیور فرانت‌اند</h2>
           <p className="text-lg">ساخت برنامه‌های وبِ سریع، مقیاس پذیر و با تمرکز بر کاربر</p>
           <div className="w-full flex items-center justify-center gap-5">
-            <Button className="w-1/2 rounded-[30px]">پروژه‌ها</Button>
-            <Button className="w-1/2 rounded-[30px]">ارتباط با من</Button>
+            <GlowButton>پروژه‌ها</GlowButton>
+            <GlowButton>ارتباط با من</GlowButton>
           </div>
         </div>
       </div>
