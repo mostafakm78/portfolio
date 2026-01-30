@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import GlowButton from '@/components/shared/GlowButton';
 import SocialButton from '@/components/shared/SocialButton';
-import { useTranslations } from 'next-intl';
-
+import { useLocale, useTranslations } from 'next-intl';
+import { useStage } from '@/components/Providers/StageProvider';
 
 const HomePage = () => {
   const t = useTranslations('HomePage');
+  const { setStage } = useStage();
+  const locale = useLocale();
 
   return (
     <section className="relative z-20 w-full h-full flex items-center justify-center">
@@ -40,12 +42,16 @@ const HomePage = () => {
           <h2 className="text-4xl font-light">{t('desc')}</h2>
           <p className="text-lg">{t('desctwo')}</p>
           <div className="w-full flex items-center justify-center gap-5">
-            <GlowButton>{t('projects')}</GlowButton>
-            <GlowButton>{t('contact')}</GlowButton>
+            <GlowButton type="button" onClick={() => setStage('Projects')}>
+              {t('projects')}
+            </GlowButton>
+            <GlowButton type="button" onClick={() => setStage('ContactMe')}>
+              {t('contact')}
+            </GlowButton>
           </div>
         </div>
       </div>
-      <div className="absolute left-0 bottom-0 flex gap-2 items-center justify-center">
+      <div className={`absolute ${locale === 'fa' ? 'left-0' : 'right-0'} -bottom-7 flex gap-2 items-center justify-center`}>
         <SocialButton name="telegram" link="https://t.me/Mostafakamari78" />
         <SocialButton name="github" link="https://github.com/mostafakm78" />
         <SocialButton name="linkedin" link="http://linkedin.com/in/mostafa-kamari" />

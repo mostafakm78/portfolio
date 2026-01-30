@@ -34,7 +34,7 @@ export default function MainSection() {
 
       <section className={`bg-background p-10 relative w-full flex-1 rounded-[30px] rounded-tr-none shadow-[0px_2px_2px_rgba(0,0,0,0.1)]`}>
         {content}
-        <div className="w-full h-full absolute right-0 top-0 z-10 opacity-70 bg-[linear-gradient(330deg,var(--color-primary)_10%,var(--color-background)_25%)] rounded-[30px] rounded-tr-none" />
+        <div className="w-full h-full absolute pointer-events-none right-0 top-0 z-10 opacity-70 bg-[linear-gradient(330deg,var(--color-primary)_10%,var(--color-background)_25%)] rounded-[30px] rounded-tr-none" />
       </section>
     </section>
   );

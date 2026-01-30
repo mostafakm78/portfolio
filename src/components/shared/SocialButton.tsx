@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { SocialType } from '@/types/Types';
 import Link from 'next/link';
 import { JSX } from 'react';
@@ -9,9 +10,9 @@ const ICONS: Record<SocialType, JSX.Element> = {
   linkedin: <FaLinkedin />,
 };
 
-const SocialButton = ({ name, link }: { name: SocialType; link: string }) => {
+const SocialButton = ({ name, link, classname }: { name: SocialType; link: string; classname?: string }) => {
   return (
-    <Link href={link} target="_blank" className="text-3xl hover:opacity-80 duration-300 text-foreground">
+    <Link href={link} target="_blank" className={cn('text-3xl hover:opacity-80 duration-300 text-foreground', classname)}>
       {ICONS[name]}
     </Link>
   );
