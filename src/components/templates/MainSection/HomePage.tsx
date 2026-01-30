@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 import GlowButton from '@/components/shared/GlowButton';
+import SocialButton from '@/components/shared/SocialButton';
+import { useTranslations } from 'next-intl';
 
-gsap.registerPlugin(useGSAP);
 
 const HomePage = () => {
+  const t = useTranslations('HomePage');
+
   return (
     <section className="relative z-20 w-full h-full flex items-center justify-center">
       <div className="w-1/2 h-full flex items-center justify-center">
@@ -15,11 +15,11 @@ const HomePage = () => {
       <div className="w-1/2 h-full flex flex-col items-center justify-center">
         <div className="space-y-4 text-center">
           <h1 className="text-center text-7xl font-extrabold flex flex-col">
-            <span>پورتفولیو</span>
-            <span>مصطفی کمری</span>
+            <span>{t('portfolio')}</span>
+            <span>{t('name')}</span>
           </h1>
           <div className="bg-muted relative rounded-[15px] w-[230px] h-[27px] flex items-center justify-center mr-auto">
-            <span className="text-foreground dark:text-background">React, Next.js, TypeScript</span>
+            <span className="text-foreground font-light dark:text-background font-vazir">React, Next.js, TypeScript</span>
             <svg className="w-14 h-14 absolute -right-16 -top-1 opacity-20" version="1.0" xmlns="http://www.w3.org/2000/svg" width="600.000000pt" height="600.000000pt" viewBox="0 0 600.000000 600.000000" preserveAspectRatio="xMidYMid meet">
               <g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                 <path
@@ -37,13 +37,18 @@ const HomePage = () => {
               </g>
             </svg>
           </div>
-          <h2 className="text-4xl font-light">توسعه دهنده جونیور فرانت‌اند</h2>
-          <p className="text-lg">ساخت برنامه‌های وبِ سریع، مقیاس پذیر و با تمرکز بر کاربر</p>
+          <h2 className="text-4xl font-light">{t('desc')}</h2>
+          <p className="text-lg">{t('desctwo')}</p>
           <div className="w-full flex items-center justify-center gap-5">
-            <GlowButton>پروژه‌ها</GlowButton>
-            <GlowButton>ارتباط با من</GlowButton>
+            <GlowButton>{t('projects')}</GlowButton>
+            <GlowButton>{t('contact')}</GlowButton>
           </div>
         </div>
+      </div>
+      <div className="absolute left-0 bottom-0 flex gap-2 items-center justify-center">
+        <SocialButton name="telegram" link="https://t.me/Mostafakamari78" />
+        <SocialButton name="github" link="https://github.com/mostafakm78" />
+        <SocialButton name="linkedin" link="http://linkedin.com/in/mostafa-kamari" />
       </div>
     </section>
   );

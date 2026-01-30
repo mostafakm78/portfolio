@@ -1,4 +1,3 @@
-import ScrollToTop from '@/helpers/ScrollToTop';
 import '../globals.css';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { ThemeProvider } from '@/components/Providers/ThemeProvider';
@@ -44,7 +43,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir='rtl' suppressHydrationWarning>
-      <body className={`bg-white dark:bg-gray-800 selection:bg-red-500 ${locale === 'fa' ? 'font-vazir' : 'font-stacksans'} overflow-x-hidden`}>
+      <body className={`bg-white dark:bg-gray-800 selection:bg-primary ${locale === 'fa' ? 'font-vazir' : 'font-stacksans'} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}

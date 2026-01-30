@@ -75,7 +75,7 @@ export function ThemeToggle() {
   return (
     // Wrapper used as GSAP scope
     <div ref={scope} className="inline-flex overflow-hidden">
-      <Button onClick={toggleTheme} variant="outline" className="relative border-none md:h-9 md:w-9 h-5 w-5 p-3.5 rounded-full shadow-none bg-primary text-foreground dark:text-background cursor-pointer hover:bg-background/50" aria-label="Toggle theme" title={`Theme: ${theme}`}>
+      <Button onClick={toggleTheme} variant="outline" className="relative border-none md:h-9 md:w-9 h-5 w-5 p-3.5 rounded-full shadow-none bg-primary text-foreground dark:text-background cursor-pointer hover:bg-primary/80" aria-label="Toggle theme" title={`Theme: ${theme}`}>
         {/* Animated theme icon */}
         <span ref={iconRef} className="inline-flex">
           {getIcon()}

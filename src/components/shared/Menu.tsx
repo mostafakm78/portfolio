@@ -1,19 +1,37 @@
-import { useLocale } from 'next-intl';
-import { useEffect, useMemo, useRef, useState } from 'react';
+'use client';
 
-const itemsFa = ['صفحه اصلی', 'درباره من', 'پروژه‌ها', 'ارتباط با من'] as const;
-const itemsEn = ['HomePage', 'About Me', 'Projects', 'Contact Me'] as const;
+import { useLocale } from 'next-intl';
+import { useEffect, useRef } from 'react';
+import { useStage } from '../Providers/StageProvider';
+import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
+import { Label } from '../ui/label';
+import type { StageProps } from '@/types/Types';
+
+type MenuItem = {
+  value: StageProps;
+  labelFa: string;
+  labelEn: string;
+};
 
 const Menu: React.FC = () => {
+  const { stage, setStage } = useStage();
   const locale = useLocale();
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const items: MenuItem[] = [
+    { value: 'HomePage' as StageProps, labelFa: 'صفحه اصلی', labelEn: 'HomePage' },
+    { value: 'AboutMe' as StageProps, labelFa: 'درباره من', labelEn: 'About Me' },
+    { value: 'Projects' as StageProps, labelFa: 'پروژه‌ها', labelEn: 'Projects' },
+    { value: 'ContactMe' as StageProps, labelFa: 'ارتباط با من', labelEn: 'Contact Me' },
+  ];
 
-  const ulRef = useRef<HTMLUListElement | null>(null);
-  const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const activeIndex = Math.max(
+    0,
+    items.findIndex((i) => i.value === stage)
+  );
+
+  const ulRef = useRef<HTMLDivElement | null>(null);
+  const itemRefs = useRef<(HTMLLabelElement | null)[]>([]);
   const lineRef = useRef<HTMLDivElement | null>(null);
-
-  const items = useMemo(() => (locale === 'fa' ? itemsFa : itemsEn), [locale]);
 
   const updateLine = () => {
     const ulEl = ulRef.current;
@@ -30,36 +48,40 @@ const Menu: React.FC = () => {
   };
 
   useEffect(() => {
-    updateLine();
-
+    const raf = requestAnimationFrame(updateLine);
     window.addEventListener('resize', updateLine);
-    return () => window.removeEventListener('resize', updateLine);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', updateLine);
+    };
   }, [activeIndex, locale]);
 
-  useEffect(() => {
-    if (activeIndex >= items.length) setActiveIndex(0);
-
-    itemRefs.current = [];
-  }, [items.length, activeIndex]);
-
   return (
-    <ul ref={ulRef} className={`relative flex h-full text-lg w-1/2 text-foreground dark:text-background items-center justify-around rounded-[30px] rounded-b-none bg-primary px-10 ${locale === 'fa' ? 'font-bold' : 'font-medium'}`}>
+    <RadioGroup
+      defaultValue="HomePage"
+      value={stage as string}
+      onValueChange={(v) => setStage(v as StageProps)}
+      ref={ulRef}
+      className={`relative flex h-full w-1/2 text-foreground dark:text-background items-center justify-around rounded-[30px] rounded-b-none bg-primary px-10 ${locale === 'fa' ? 'flex-row-reverse' : ''}`}
+    >
       {items.map((item, index) => (
-        <li key={item}>
-          <button
+        <div key={String(item.value)}>
+          <RadioGroupItem id={`menu-${String(item.value)}`} value={String(item.value)} className="sr-only" />
+          <Label
             ref={(el) => {
               itemRefs.current[index] = el;
             }}
-            onClick={() => setActiveIndex(index)}
-            className="cursor-pointer py-2"
-            type="button"
+            htmlFor={`menu-${String(item.value)}`}
+            className={`cursor-pointer py-2 hover:opacity-80 duration-300 text-lg ${locale === 'fa' ? 'font-bold' : 'font-medium'}`}
           >
-            {item}
-          </button>
-        </li>
+            {locale === 'fa' ? item.labelFa : item.labelEn}
+          </Label>
+        </div>
       ))}
+
       <div ref={lineRef} className="absolute bottom-0.5 h-1 bg-foreground dark:bg-background transition-all duration-300" />
-    </ul>
+    </RadioGroup>
   );
 };
 

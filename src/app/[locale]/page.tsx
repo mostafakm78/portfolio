@@ -1,9 +1,12 @@
-import MainSection from '@/components/shared/MainSection';
+import { StageProvider } from '@/components/Providers/StageProvider';
+import MainSection from '@/components/templates/MainSection/MainSection';
 
 export default function Home() {
   return (
     <main>
-      <MainSection />
+      <StageProvider>
+        <MainSection />
+      </StageProvider>
     </main>
   );
 }

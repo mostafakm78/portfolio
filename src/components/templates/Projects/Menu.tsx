@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { RiMenuSearchLine } from 'react-icons/ri';
-import { App, apps } from '../MainSection/Aboutme';
+import { App, apps } from '../MainSection/Aboutmetwo';
 
 export function Menu() {
   const t = useTranslations('AllProjects');

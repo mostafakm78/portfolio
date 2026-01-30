@@ -39,8 +39,7 @@ const GlowButton = ({ children }: { children: React.ReactNode }) => {
           absolute -inset-1
           rounded-full
           bg-[linear-gradient(45deg,transparent,rgba(255,255,255,0.7),transparent)]
-          blur-md
-        "
+          blur-md"
       />
 
       {/* Button content */}

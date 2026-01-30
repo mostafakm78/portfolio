@@ -1,14 +1,26 @@
 'use client';
-
-import { useLocale, useTranslations } from 'next-intl';
 import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import LocaleToggle from '@/components/shared/LocaleSwitcher';
 import Menu from '@/components/shared/Menu';
-import HomePage from '../templates/MainSection/HomePage';
+import HomePage from './HomePage';
+import AboutMe from './Aboutme';
+import { useStage } from '@/components/Providers/StageProvider';
+import Projects from './Projects';
+import ContactMe from './Contactme';
+import { StageProps } from '@/types/Types';
+import { JSX } from 'react';
 
 export default function MainSection() {
-  const t = useTranslations('AboutMe');
-  const locale = useLocale();
+  const { stage } = useStage();
+
+  const screens: Record<StageProps, JSX.Element> = {
+    HomePage: <HomePage />,
+    AboutMe: <AboutMe />,
+    Projects: <Projects />,
+    ContactMe: <ContactMe />,
+  };
+
+  const content = screens[stage] ?? <HomePage />;
 
   return (
     <section className="h-screen p-4 flex flex-col">
@@ -21,7 +33,7 @@ export default function MainSection() {
       </section>
 
       <section className={`bg-background p-10 relative w-full flex-1 rounded-[30px] rounded-tr-none shadow-[0px_2px_2px_rgba(0,0,0,0.1)]`}>
-        <HomePage />
+        {content}
         <div className="w-full h-full absolute right-0 top-0 z-10 opacity-70 bg-[linear-gradient(330deg,var(--color-primary)_10%,var(--color-background)_25%)] rounded-[30px] rounded-tr-none" />
       </section>
     </section>

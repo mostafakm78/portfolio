@@ -70,7 +70,7 @@ export default function LocaleToggle() {
   return (
     // Wrapper used as GSAP animation scope
     <div ref={scope} className="overflow-hidden">
-      <Button onClick={handleToggle} variant="outline" className="relative rounded-full border-none md:h-9 md:w-9 h-5 w-5 p-3.5 shadow-none bg-primary cursor-pointer hover:bg-background/50 text-foreground dark:text-background" aria-label="Toggle language" title={`Lang: ${locale}`}>
+      <Button onClick={handleToggle} variant="outline" className="relative rounded-full border-none md:h-9 md:w-9 h-5 w-5 p-3.5 shadow-none bg-primary cursor-pointer hover:bg-primary/80 text-foreground dark:text-background" aria-label="Toggle language" title={`Lang: ${locale}`}>
         {/* Animated locale label */}
         <span ref={labelRef} className="inline-flex items-center justify-center text-xs font-semibold select-none">
           {locale === 'fa' ? 'EN' : 'Fa'}
