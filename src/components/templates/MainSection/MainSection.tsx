@@ -5,7 +5,7 @@ import Menu from '@/components/shared/Menu';
 import HomePage from './HomePage';
 import AboutMe from './Aboutme';
 import { useStage } from '@/components/Providers/StageProvider';
-import Projects from './Projects';
+import Projects from './ProjectsPage';
 import ContactMe from './Contactme';
 import { StageProps } from '@/types/Types';
 import { JSX } from 'react';
@@ -32,7 +32,7 @@ export default function MainSection() {
         </div>
       </section>
 
-      <section className={`bg-background p-10 relative w-full flex-1 rounded-[30px] rounded-tr-none shadow-[0px_2px_2px_rgba(0,0,0,0.1)]`}>
+      <section className={`bg-background py-6 px-10 3xl:py-10 3xl:px-10 relative w-full flex-1 rounded-[30px] rounded-tr-none shadow-[0px_2px_2px_rgba(0,0,0,0.1)]`}>
         {content}
         <div className="w-full h-full absolute pointer-events-none right-0 top-0 z-10 opacity-70 bg-[linear-gradient(330deg,var(--color-primary)_10%,var(--color-background)_25%)] rounded-[30px] rounded-tr-none" />
       </section>

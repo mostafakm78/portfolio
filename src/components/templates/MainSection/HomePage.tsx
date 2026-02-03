@@ -51,7 +51,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className={`absolute ${locale === 'fa' ? 'left-0' : 'right-0'} -bottom-7 flex gap-2 items-center justify-center`}>
+      <div className={`absolute ${locale === 'fa' ? 'left-0' : 'right-0'} -bottom-3 flex gap-2 items-center justify-center`}>
         <SocialButton name="telegram" link="https://t.me/Mostafakamari78" />
         <SocialButton name="github" link="https://github.com/mostafakm78" />
         <SocialButton name="linkedin" link="http://linkedin.com/in/mostafa-kamari" />

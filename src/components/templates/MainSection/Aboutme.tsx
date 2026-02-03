@@ -77,10 +77,10 @@ const AboutMe = () => {
           })}
         </div>
       </div>
-      <div className={`absolute ${locale === 'fa' ? 'left-0' : 'right-0'} -bottom-7 flex gap-2 items-center justify-center`}>
-        <SocialButton name="telegram" classname="text-2xl" link="https://t.me/Mostafakamari78" />
-        <SocialButton name="github" classname="text-2xl" link="https://github.com/mostafakm78" />
-        <SocialButton name="linkedin" classname="text-2xl" link="http://linkedin.com/in/mostafa-kamari" />
+      <div className={`absolute ${locale === 'fa' ? 'left-0' : 'right-0'} -bottom-3 flex gap-2 items-center justify-center`}>
+        <SocialButton name="telegram" classname="text-xl" link="https://t.me/Mostafakamari78" />
+        <SocialButton name="github" classname="text-xl" link="https://github.com/mostafakm78" />
+        <SocialButton name="linkedin" classname="text-xl" link="http://linkedin.com/in/mostafa-kamari" />
       </div>
     </section>
   );

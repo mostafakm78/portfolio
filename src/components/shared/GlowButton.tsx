@@ -9,9 +9,10 @@ import { cn } from '@/lib/utils';
 
 interface GlowButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  spanclassname?: string;
 }
 
-const GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(({ children, className, ...props }, ref) => {
+const GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(({ children, className, spanclassname, ...props }, ref) => {
   const glowRef = useRef<HTMLSpanElement>(null);
 
   useGSAP(() => {
@@ -56,7 +57,7 @@ const GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(({ child
       />
 
       {/* Content */}
-      <span className="relative z-10 font-medium">{children}</span>
+      <span className={cn('relative z-10 font-medium', spanclassname)}>{children}</span>
     </Button>
   );
 });
