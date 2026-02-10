@@ -14,7 +14,7 @@ import { IoIosMore } from 'react-icons/io';
 
 const Projects = () => {
   const locale = useLocale();
-  const [more, setMore] = useState<boolean>(false);
+  const [openId, setOpenId] = useState<string | null>(null);
   const ProjectsList = [...ProjectsData.projects].reverse();
   const t = useTranslations('Projects');
   const { setLastIndex } = useStage();
@@ -42,6 +42,7 @@ const Projects = () => {
     <>
       {ProjectsList.map((project: ProjectProps, index: number) => {
         const isLast = index === ProjectsList.length - 1;
+        const isOpen = openId === project.id;
 
         return (
           <article
@@ -78,8 +79,13 @@ const Projects = () => {
                   </div>
                 </div>
                 <span className={`text-[10px] text-foreground dark:text-background opacity-80 absolute bottom-1/12 ${locale === 'fa' ? 'right-1/8' : 'right-1/10'} 3xl:right-1/6`}>{t('moreinfo')}</span>
-                <GlowButton onClick={() => setMore(!more)} spanclassname="flex flex-col items-center justify-center gap-0" className="absolute bottom-0 left-3.5 3xl:left-2 3xl:w-[110px] 3xl:h-[85px] w-[90px] h-[70px] rounded-[15px] text-base">
-                  {more ? (
+                <GlowButton
+                  itemID={project.id}
+                  onClick={() => setOpenId((prev) => (prev === project.id ? null : project.id))}
+                  spanclassname="flex flex-col items-center justify-center gap-0"
+                  className="absolute bottom-0 left-3.5 3xl:left-2 3xl:w-[110px] 3xl:h-[85px] w-[90px] h-[70px] rounded-[15px] text-base"
+                >
+                  {isOpen ? (
                     <>
                       <span>{t('close')}</span>
                       {locale === 'fa' ? <FaChevronRight className="ml-2" /> : <FaChevronLeft className="mr-1" />}
@@ -94,7 +100,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="w-1/2 h-full flex items-center justify-center">
-              {more ? (
+              {isOpen ? (
                 <MoreInfoProject challenges={project.challenge} description={project.desc} technologies={project.techs} />
               ) : (
                 <div className="flex flex-col items-center justify-center text-xl opacity-30">

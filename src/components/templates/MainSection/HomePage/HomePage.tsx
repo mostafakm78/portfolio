@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <section className="relative z-20 w-full h-full flex items-center justify-center">
       <div className="w-1/2 h-full flex items-center justify-center">
-        <Image src="/images/mainPhoto.png" alt="main photo" width={500} height={500} />
+        <Image className="drop-shadow-lg transition-transform hover:scale-105 duration-300" src="/images/mainPhoto.png" alt="main photo" width={500} height={500} priority />
       </div>
       <div className="w-1/2 h-full flex flex-col items-center justify-center">
         <div className="space-y-4 text-center">

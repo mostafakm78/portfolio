@@ -23,7 +23,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   return {
     title: locale === 'fa' ? 'مصطفی کمری' : 'Mostafa Kamari',
-    description: locale === 'fa' ? 'پروژه Next.js با پشتیبانی i18n' : 'Next.js project with i18n support',
+    description: locale === 'fa' ? 'توسعه دهنده جونیور فرانت‌اند. ساخت برنامه‌های وبِ سریع، مقیاس پذیر و با تمرکز بر کاربر' : 'Junior Frontend Developer. Building fast, scalable, and user-focused web applications',
+    metadataBase: new URL('https://portfolio-immostafakamari.vercel.app'),
+    openGraph: {
+      title: locale === 'fa' ? 'مصطفی کمری' : 'Mostafa Kamari',
+      description: locale === 'fa' ? 'توسعه دهنده جونیور فرانت‌اند. ساخت برنامه‌های وبِ سریع، مقیاس پذیر و با تمرکز بر کاربر' : 'Junior Frontend Developer. Building fast, scalable, and user-focused web applications',
+      url: 'https://portfolio-immostafakamari.vercel.app',
+      siteName: locale === 'fa' ? 'پورتفولیو مصطفی کمری' : 'Mostafa Kamari Portfolio',
+      type: 'website',
+      images: [{ url: '/images/og.png', width: 1200, height: 630, alt: locale === 'fa' ? 'پورتفولیو مصطفی کمری' : 'Mostafa Kamari Portfolio' }],
+    },
   };
 }
 
