@@ -2,8 +2,8 @@
 
 import Projects from '@/data/projects.json';
 import Image from 'next/image';
-import { PhotosModal } from '../HomePage/PhotosModal';
-import { SourceCodeModal } from '../HomePage/SourceCodeModal';
+import { PhotosModal } from '../MainSection/PhotosModal';
+import { SourceCodeModal } from '../MainSection/SourceCodeModal';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { LiquidGlass } from '@/components/shared/LiquidGlassCard';

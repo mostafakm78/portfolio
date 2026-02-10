@@ -218,31 +218,31 @@ body {
 
 
 
-body {
-  --sb-track-color: oklch(0.92 0.014 241);
-  --sb-thumb-color: oklch(0.333 0.045 256);
-  --sb-size: 14px;
+* {
+  --sb-track-color: white;
+  --sb-thumb-color: oklch(0.837 0.117 66);
+  --sb-size: 11px;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: var(--sb-size)
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: var(--sb-track-color);
 }
 
 .dark *::-webkit-scrollbar-track {
-  background: var(--sb-thumb-color);
+  background: #2b3036;
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
 
 }
 
 .dark *::-webkit-scrollbar-thumb {
-  background: var(--sb-track-color);
+  background: var(--sb-thumb-color);
 
 }
 

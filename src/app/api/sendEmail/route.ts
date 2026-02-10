@@ -1,47 +1,37 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+import Email from '../../../../emails';
 
-export async function POST(request: Request) {
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY!);
+
+export async function POST(req: Request) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, description } = await req.json();
 
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { message: 'همه فیلدها اجباری هستند.' },
-        { status: 400 }
-      );
+    if (!name || !email || !description) {
+      return NextResponse.json({ message: 'همه فیلدها اجباری هستند.' }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+    const { data, error } = await resend.emails.send({
+      from: 'PortFolio <onboarding@resend.dev>',
+      to: ['mostafamf555@gmail.com'],
+      subject: 'Message from Portfolio Contact Form',
+      react: Email({ name, email, desc: description }),
     });
 
-    await transporter.sendMail({
-      from: email,
-      to: process.env.EMAIL_RECEIVER,
-      subject: 'پیام جدید از فرم تماس',
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-    });
+    if (error) {
+      return Response.json({ error }, { status: 500 });
+    }
 
     return NextResponse.json(
       {
         message: 'ایمیل با موفقیت ارسال شد!',
         success: true,
+        data,
       },
       { status: 201 }
     );
-  } catch (error) {
-    console.log(error);
-
-    return NextResponse.json(
-      { message: 'خطا در ارسال ایمیل', error },
-      { status: 500 }
-    );
+  } catch (error: any) {
+    return NextResponse.json({ message: 'خطا در ارسال ایمیل', error: error.message }, { status: 500 });
   }
 }

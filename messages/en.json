@@ -7,60 +7,47 @@
     "switch": "Switch language"
   },
   "HomePage": {
-    "name": "Mostafa Kamari",
-    "portfolio": "Portfolio",
+    "name": "Portfolio",
+    "portfolio": "Mostafa Kamari",
     "projects": "Projects",
     "contact": "Contact Me",
-    "aboutme": "About Me"
+    "desc": "Junior Frontend Developer",
+    "desctwo": "Building fast, scalable, and user-focused web applications"
   },
   "AboutMe": {
     "skills": "Skills",
     "aboutme": "About Me",
+    "contact": "Contact Me",
     "download": "Download Resume",
-    "down" : "Download",
-    "resume" : "Resume",
-    "aboutmefull": "Hello! I'm Mostafa Kamari, born on February 24, 2000.\nFrom the very beginning, I had a deep passion for the world of technology and computers, which led me to pursue my academic and professional path in this field. I love designing and creating new things, especially in graphic-related areas like UI design and crafting engaging user experiences.\nBuilding a website from scratch and seeing the final result match my exact vision always gives me an incredible feeling. One of my key personality traits is that I never get tired of learning. I'm constantly seeking new challenges and strive to enhance my skills by solving complex problems and continuously growing.\nI have a strong passion for bringing my ideas to life through coding. This enthusiasm has driven me to persistently learn various tools and technologies in web design and software development. My diverse work experiences have taught me that creativity, combined with discipline and planning, can lead to extraordinary results.\nThat's why I always strive to approach my projects with precision, high quality, and full focus. I'm also passionate about teamwork because I believe that combining ideas and efforts leads to the best outcomes.\nI hope to continue this journey with more learning and experiences and create amazing things along the way. If you'd like to connect with me or discuss collaborations and new projects, I'd be happy to hear from you! 🚀"
-  },
-  "Projects": {
-    "lastprojects": "Latest Projects",
-    "see": "Preview",
-    "sourcecode": "Source Code",
-    "technology": "Technologies",
-    "photos": "Photos",
-    "allprojects": "All Projects",
-    "projectsphotos": "Project photos"
+    "aboutmefull": "I am Mostafa Kamari, born on March 5, 2000. From an early age, I have had a strong interest in technology and computers, an interest that shaped my educational and professional path in this field.\nI am deeply passionate about designing and developing new products, especially in graphic-related areas such as UI design and creating engaging user experiences. Designing and building a website from scratch and seeing a result that perfectly matches my ideas has always been inspiring and deeply satisfying for me.\nOne of my strongest personal traits is an endless desire to learn. I am constantly seeking new challenges and strive to improve my skills and grow continuously by solving complex problems.\nI have a strong passion for turning ideas in my mind into reality through coding. This interest has driven me to consistently learn various tools and technologies in the fields of web design and software development.\nMy diverse professional experiences have taught me that creativity, when combined with discipline and precise planning, can lead to remarkable achievements. For this reason, I always aim to complete my projects with maximum accuracy, high quality, and full focus.\nI am also highly interested in teamwork, as I believe that the combination of ideas and collective effort leads to the best results.\nI hope to continue this journey by gaining more knowledge and experience and to contribute to the creation of impactful and meaningful achievements.\nIf you would like to get in touch or discuss collaboration opportunities and new projects, I would be happy to hear from you."
   },
   "Contact": {
     "contactme": "Contact Me",
     "contactone": "If you have any collaboration proposals, I’d be happy to hear them! I’d love to talk about your ideas, projects, and front-end needs. If you’re looking to build a fast, modern, and visually appealing website — or need someone to bring your designs and ideas to life — I’m here!",
     "contacttwo": "Contact me — let’s create something together that’s truly worth seeing.",
-    "telegram": "Telegram",
-    "email": "Email",
-    "linkedin": "Linkedin",
-    "github": "Github",
-    "instagram": "Instagram",
-    "whatsapp": "Whatsapp",
-    "phone": "Phone",
-    "rights": "All rights of this website are reserved to Mostafa Kamari."
+    "social": "Social Media",
+    "sendms" : "Send Message",
+    "name" : "Full Name",
+    "email" : "Your Email",
+    "description" : "Your Message",
+    "character": "characters",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!"
   },
-  "AllProjects": {
-    "allprojects": "All Projects",
+  "Projects": {
+    "projects": "Projects",
+    "desc": "All projects include the technologies used, libraries, descriptions, challenges, images, GitHub repository links, and website links in their information section.",
     "notfound": "No projects found",
-    "all": "Show All",
-    "findpr": "Search for your desired project.",
-    "homepage": "HomePage",
-    "sortby": "Sort by",
-    "oldest": "Oldest",
-    "newest": "Newest",
-    "findproject": "Find Project",
-    "keyword": "Enter a keyword",
-    "search": "Find",
-    "searchbytech": "Find by Technology",
-    "see": "Preview",
-    "sourcecode": "Source Code",
-    "aboutprojects": "About Projects",
-    "secone": "In this section, you’ll find a collection of projects I’ve developed over the past years using modern front-end technologies. Each project reflects a part of my learning journey and experience — from designing user interfaces and interactive animations to implementing complex structures with Next.js, managing data, and building custom components.",
-    "sectwo": "In every project, I’ve tried to focus not only on visual aesthetics but also on performance, accessibility, user experience, and optimization. Using tools like React, Next.js, Tailwind, shadcn, and various libraries has allowed me to turn ideas into functional and scalable solutions.",
-    "secthree": "The projects showcased here are a mix of personal works, practice builds, and portfolio pieces created to strengthen my skills and gain real-world development experience. Each one represents a step forward in my growth as a front-end developer."
+    "moreprojects": "Keep scrolling to discover more projects",
+    "rep": "Repository",
+    "view": "View Site",
+    "more": "More",
+    "close": "Close",
+    "moreinfo": "Click on ‘More’ to see the full project details",
+    "notopen": "You haven’t opened the project yet",
+    "about": "About the Project",
+    "techs": "Libraries & Technologies",
+    "chall": "Challenges"
   }
 }

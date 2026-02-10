@@ -66,7 +66,7 @@ export default function Contact({ contactRef }: ContactProps) {
             </li>
             <li className='w-full lg:w-auto'>
               <Link
-                href="http://linkedin.com/in/mostafa-kamari-b82450351"
+                href="http://linkedin.com/in/mostafa-kamari"
                 target="_blank"
                 className="flex items-center gap-2 xl:text-2xl justify-center p-4 bg-linear bg-linear-180 from-foreground/20 to-background shadow-lg rounded-xl group hover:from-foreground text-secondary duration-300 transition-colors cursor-pointer"
               >

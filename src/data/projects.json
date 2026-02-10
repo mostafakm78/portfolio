@@ -1,26 +1,35 @@
 {
   "projects": [
     {
+      "id": "1",
       "name": {
-        "fa": "لندینگ پیج رسپانسیو",
-        "en": "Responsive LandingPage"
+        "fa": "لندینگ پیج",
+        "en": "LandingPage"
       },
-      "src": "https://mostafakm78.github.io/LandingPage/",
+      "link": "https://mostafakm78.github.io/LandingPage/",
+      "src": "https://github.com/mostafakm78/LandingPage",
       "photos": ["/images/projects/LandingPage/1-LandingPage.png", "/images/projects/LandingPage/2-LandingPage.png", "/images/projects/LandingPage/3-LandingPage.png", "/images/projects/LandingPage/4-LandingPage.png"],
       "desc": {
-        "fa": "سایت لندینگ پیج ساده برای درک UI",
-        "en": "A simple landing page website for understanding UI"
+        "fa": "این لندینگ پیج یکی از اولین تمرین‌های من برای یادگیری طراحی ریسپانسیو و برقراری ارتباط بین JavaScript و HTML بود. در این پروژه همچنین با ابزار Tailwind CSS آشنا شدم و از آن برای ساده‌تر و سریع‌تر کردن فرآیند استایل‌دهی استفاده کردم.",
+        "en": "This landing page was one of my first exercises in learning responsive design and connecting JavaScript with HTML. Through this project, I also became familiar with Tailwind CSS and used it to simplify and speed up the styling process."
       },
-      "techtitle": ["JavaScript", "Tailwind CSS", "HTML"],
-      "tech": ["/images/javascript-programming-language-icon.png", "/images/tailwind-css-icon.png", "/images/html-icon.png"]
+      "techs": [
+        { "name": "JavaScript", "logo": "/images/javascript-programming-language-icon.png" },
+        { "name": "Tailwind CSS", "logo": "/images/tailwind-css-icon.png" },
+        { "name": "HTML", "logo": "/images/html-icon.png" }
+      ],
+      "challenge": {
+        "fa": ["پیاده‌سازی طراحی ریسپانسیو برای اندازه‌های مختلف صفحه", "برقراری ارتباط بین JavaScript و HTML", "یادگیری و استفاده از Tailwind CSS", "مدیریت استایل‌دهی بدون پیچیده‌شدن کد"],
+        "en": ["Implementing responsive design for different screen sizes", "Connecting JavaScript with HTML elements", "Learning and using Tailwind CSS", "Managing styling without increasing code complexity"]
+      }
     },
     {
+      "id": "2",
       "name": {
-        "fa": "نمونه بازطراحی شده وبسایت ست کافی",
-        "en": "Redesigned example of Set Coffee website"
+        "fa": "ست کافی",
+        "en": "Set Coffee"
       },
       "src": "https://github.com/mostafakm78/coffeeset",
-      "link": "https://setcoffee-shop.ir/",
       "photos": [
         "/images/projects/SetCoffee/1-SetCoffee.png",
         "/images/projects/SetCoffee/2-SetCoffee.png",
@@ -36,31 +45,52 @@
         "/images/projects/SetCoffee/12-SetCoffee.png"
       ],
       "desc": {
-        "fa": "توضیحات :‌ نمونه کامل بازطراحی شده وب سایت ست کافی همراه با بک اند و قابلیت ثبت نام و ورود به پنل ادمین و کاربری و افزودن محصول جدید و افزودن محصول به سبد خرید و البته رسپانسیو :)",
-        "en": "Description: A fully redesigned example of the Set Coffee website, complete with backend, user registration and login, admin and user panels, the ability to add new products, add products to the cart, and of course, fully responsive :)"
+        "fa": "ست کافی اولین پروژه متوسط رو به بزرگی بود که در طول دوره پیاده‌سازی و به‌صورت لایو منتشر کردم. این پروژه باعث درک بهتر مفاهیم SSG، SSR، Page Router و App Router در Next.js شد و با پیاده‌سازی پنل کاربری، پنل مدیریت و نمایش محصولات، تجربه عملی ارزشمندی از کار با Next.js و React به من داد.",
+        "en": "Set Coffee was the first medium-to-large scale project I completed during a course and successfully deployed live. This project helped me gain a deeper understanding of SSG, SSR, Pages Router, and App Router in Next.js, and provided valuable hands-on experience with Next.js and React through building admin and user panels and dynamic product displays."
       },
-      "techtitle": ["React js", "CSS", "HTML", "Next js"],
-      "tech": ["/images/react-js-icon.png", "/images/css-icon.png", "/images/html-icon.png", "/images/nextjs-icon.png"]
+      "techs": [
+        { "name": "React", "logo": "/images/react-js-icon.png" },
+        { "name": "JavaScript", "logo": "/images/javascript-programming-language-icon.png" },
+        { "name": "CSS", "logo": "/images/css-icon.png" },
+        { "name": "HTML", "logo": "/images/html-icon.png" },
+        { "name": "Next.js", "logo": "/images/nextjs-icon.png" }
+      ],
+      "challenge": {
+        "fa": ["درک و پیاده‌سازی SSG و SSR در Next.js", "کار هم‌زمان با Pages Router و App Router", "پیاده‌سازی پنل کاربری و پنل مدیریت", "نمایش و مدیریت داینامیک محصولات"],
+        "en": ["Understanding and implementing SSG and SSR in Next.js", "Working with both Pages Router and App Router", "Implementing user and admin dashboards", "Dynamic product rendering and management"]
+      }
     },
     {
+      "id": "3",
       "name": {
-        "fa": "بازطراحی سایت زودفیکس با json server",
-        "en": "Redesign of ZoodFix website using JSON Server"
+        "fa": "زودفیکس",
+        "en": "ZoodFix"
       },
       "src": "https://github.com/mostafakm78/zoodfix",
       "link": "https://zoodfix.vercel.app/",
       "photos": ["/images/projects/Zoodfix/1-Zoodfix.png", "/images/projects/Zoodfix/2-Zoodfix.png", "/images/projects/Zoodfix/3-Zoodfix.png", "/images/projects/Zoodfix/4-Zoodfix.png", "/images/projects/Zoodfix/5-Zoodfix.png"],
       "desc": {
-        "fa": "نمونه باز طراحی شده سایت زودفیکس که قسمت هایی از دیتابیس و بک اند با json server به صورت تستی انجام شده و دیتا رو از سرور میگیره",
-        "en": "Redesigned example of the ZoodFix website, where parts of the database and backend are implemented for testing using JSON Server, fetching data from the server."
+        "fa": "زودفیکس یک وب‌سایت بازطراحی‌شده با تمرکز روی پیاده‌سازی دقیق UI بر اساس یک نمونه واقعی است. در این پروژه اعتبارسنجی فرم‌ها به‌صورت دستی و بدون استفاده از کتابخانه‌های validation انجام شده تا درک عمیق‌تری از منطق validation به‌دست بیاید. ارتباط با بک‌اند ساختگی با استفاده از APIهای شبیه‌سازی‌شده (JSONPlaceholder) پیاده‌سازی شده است. همچنین دسته‌بندی و نمایش محصولات مختلف به‌صورت داینامیک انجام شده است. این پروژه تمرین عملی مناسبی برای درک UI، منطق فرم‌ها و کار با داده‌های API بود.",
+        "en": "Zoodfix is a redesigned website focused on accurate UI implementation, featuring manual form validation, dynamic product categorization, and integration with a mock backend API, providing practical experience with UI design and API-driven data."
       },
-      "techtitle": ["React js", "Tailwind CSS", "HTML", "Next js", "TypeScript", "JavaScript"],
-      "tech": ["/images/react-js-icon.png", "/images/tailwind-css-icon.png", "/images/html-icon.png", "/images/nextjs-icon.png", "/images/typescript-programming-language-icon.png", "/images/javascript-programming-language-icon.png"]
+      "techs": [
+        { "name": "React", "logo": "/images/react-js-icon.png" },
+        { "name": "Tailwind CSS", "logo": "/images/tailwind-css-icon.png" },
+        { "name": "HTML", "logo": "/images/html-icon.png" },
+        { "name": "Next.js", "logo": "/images/nextjs-icon.png" },
+        { "name": "TypeScript", "logo": "/images/typescript-programming-language-icon.png" },
+        { "name": "JavaScript", "logo": "/images/javascript-programming-language-icon.png" }
+      ],
+      "challenge": {
+        "fa": ["پیاده‌سازی دقیق UI بر اساس نمونه واقعی", "اعتبارسنجی دستی فرم‌ها بدون کتابخانه‌های آماده", "دسته‌بندی و نمایش داینامیک محصولات", "کار با بک‌اند شبیه‌سازی‌شده و داده‌های API"],
+        "en": ["Accurate UI implementation based on a real-world reference", "Manual form validation without using validation libraries", "Dynamic product categorization and display", "Working with a mock backend and API data"]
+      }
     },
     {
+      "id": "4",
       "name": {
-        "fa": "سایت پخش کننده صداهای آرامشبخش SoftSound",
-        "en": "SoftSound: A website for playing relaxing sounds"
+        "fa": "صدای آرام",
+        "en": "Soft Sound"
       },
       "src": "https://github.com/mostafakm78/murmur-sounds-web",
       "link": "https://softsound.vercel.app",
@@ -78,16 +108,28 @@
         "/images/projects/SoftSound/11-SoftSound.png"
       ],
       "desc": {
-        "fa": "اولین پروژه که بازنویسی از سایت یا صفحه دیگه ای نیست ، برای گوش دادن به صداهای آرامشبخش طبیعت همراه با امکاناتی مثل زمانبدی و ...",
-        "en": "The first project that is not a rewrite of another site or page, designed for listening to calming nature sounds with features like scheduling and more..."
+        "fa": "صدای آرام یک وب‌اپلیکیشن برای پخش صداهای آرامش‌بخش است که امکان پخش همزمان چند صدا را فراهم می‌کند. کاربران می‌توانند با انتخاب صداهای دلخواه، پلی‌لیست شخصی بسازند و از تایمر با حالت‌های مختلف برای مدیریت زمان استفاده کنند. چالش اصلی این پروژه مدیریت همزمان صداها و state آن‌ها با استفاده از Redux بوده است. همچنین ذخیره و بازیابی پلی‌لیست کاربر با استفاده از Local Storage پیاده‌سازی شده است. این پروژه تجربه عملی ارزشمندی در مدیریت state پیچیده و تعامل با APIهای مرورگر به من داد.",
+        "en": "Soft Sound is a web application for playing relaxing sounds with simultaneous playback, personalized playlists, and a timer, built with Redux for complex state management and Local Storage for saving user data, providing hands-on experience with browser APIs."
       },
-      "techtitle": ["React js", "Tailwind CSS", "HTML", "Next js", "GSAP", "TypeScript", "JavaScript"],
-      "tech": ["/images/react-js-icon.png", "/images/tailwind-css-icon.png", "/images/html-icon.png", "/images/nextjs-icon.png", "/images/gsap.png", "/images/typescript-programming-language-icon.png", "/images/javascript-programming-language-icon.png"]
+      "techs": [
+        { "name": "React", "logo": "/images/react-js-icon.png" },
+        { "name": "Tailwind CSS", "logo": "/images/tailwind-css-icon.png" },
+        { "name": "HTML", "logo": "/images/html-icon.png" },
+        { "name": "Next.js", "logo": "/images/nextjs-icon.png" },
+        { "name": "TypeScript", "logo": "/images/typescript-programming-language-icon.png" },
+        { "name": "JavaScript", "logo": "/images/javascript-programming-language-icon.png" },
+        { "name": "GSAP", "logo": "/images/gsap.png" }
+      ],
+      "challenge": {
+        "fa": ["مدیریت پخش همزمان چند صدا", "مدیریت state پیچیده با Redux", "ذخیره و بازیابی پلی‌لیست کاربر با Local Storage", "تعامل با APIهای مرورگر (Audio API)"],
+        "en": ["Managing simultaneous playback of multiple sounds", "Managing complex state with Redux", "Persisting and restoring user playlists using Local Storage", "Interacting with browser APIs (Audio API)"]
+      }
     },
     {
+      "id": "5",
       "name": {
-        "fa": "سایت کپسول",
-        "en": "Capsule Site"
+        "fa": "کپــسول",
+        "en": "Capsule"
       },
       "src": "https://github.com/mostafakm78/Capsule",
       "link": "https://www.capsule-memo.ir",
@@ -102,11 +144,24 @@
         "/images/projects/Capsule/8-Capsule.png"
       ],
       "desc": {
-        "fa": "خاطراتت رو با صدا، تصویر یا نوشته درون یک کپسول قرار بده، زمان باز شدنش رو مشخص کن، و بذار بمونه... تا روزی که برگردی و دوباره بخونیش. برای خودت، برای یه عزیز، یا شاید برای کسی که هنوز پیداش نکردی.",
-        "en": "Put your memories—through sound, image, or text—into a capsule, set the time for it to open, and let it stay... until the day you return to read it again. For yourself, for a loved one, or maybe for someone you haven't found yet."
+        "fa": "کپسول یک وب‌اپلیکیشن Front-End برای ذخیره و مدیریت خاطره‌های دیجیتال است که شامل سیستم احراز هویت و داشبوردهای مجزای admin و user می‌باشد. این پروژه با RESTful API ارتباط کامل دارد و تمرکز آن روی fetch داده‌ها، مدیریت state و کنترل دسترسی کاربران بوده است. از چالش‌های اصلی می‌توان به تفکیک نقش‌ها و هماهنگی UI با داده‌های دریافتی از API اشاره کرد. این پروژه تجربه عملی ارزشمندی از کار با معماری Front-End و سناریوهای واقعی محصول به من داد.",
+        "en": "Capsule is a front-end web application for storing and managing digital memories, featuring authentication, separate admin and user dashboards, and full integration with a RESTful API. It focuses on data fetching, state management, and access control, and provided valuable hands-on experience in front-end architecture and real-world product scenarios."
       },
-      "techtitle": ["GSAP", "Tailwind CSS", "React js", "Shadcn UI", "TypeScript", "Redux", "JavaScript", "Next js"],
-      "tech": ["/images/gsap.png", "/images/tailwind-css-icon.png", "/images/react-js-icon.png", "/images/shadcn-ui.png", "/images/typescript-programming-language-icon.png", "/images/redux-icon.png", "/images/javascript-programming-language-icon.png", "/images/nextjs-icon.png"]
+      "techs": [
+        { "name": "React", "logo": "/images/react-js-icon.png" },
+        { "name": "Tailwind CSS", "logo": "/images/tailwind-css-icon.png" },
+        { "name": "HTML", "logo": "/images/html-icon.png" },
+        { "name": "Next.js", "logo": "/images/nextjs-icon.png" },
+        { "name": "TypeScript", "logo": "/images/typescript-programming-language-icon.png" },
+        { "name": "JavaScript", "logo": "/images/javascript-programming-language-icon.png" },
+        { "name": "GSAP", "logo": "/images/gsap.png" },
+        { "name": "Shadcn UI", "logo": "/images/shadcn-ui.png" },
+        { "name": "Redux", "logo": "/images/redux-icon.png" }
+      ],
+      "challenge": {
+        "fa": ["پیاده‌سازی و مدیریت Authentication", "تفکیک نقش‌ها و کنترل دسترسی (Admin / User)", "مدیریت State و Fetch داده‌ها از RESTful API", "هماهنگی UI با داده‌های داینامیک API"],
+        "en": ["Authentication implementation and management", "Role separation and access control (Admin / User)", "State management and data fetching from RESTful APIs", "Synchronizing UI with dynamic API-driven data"]
+      }
     }
   ]
 }

@@ -1,10 +1,10 @@
-import ScrollToTop from '@/helpers/ScrollToTop';
 import '../globals.css';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { ThemeProvider } from '@/components/Providers/ThemeProvider';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { Toaster } from '@/components/ui/sonner';
 
 async function loadMessages(locale: string) {
   try {
@@ -43,11 +43,12 @@ export default async function LocaleLayout({
   const messages = await loadMessages(locale);
 
   return (
-    <html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'} suppressHydrationWarning>
-      <body className={` selection:bg-red-500 ${locale === 'fa' ? 'font-vazir' : 'font-stacksans'} overflow-x-hidden`}>
+    <html lang={locale} dir="rtl" suppressHydrationWarning>
+      <body className={`bg-white dark:bg-gray-800 selection:bg-primary ${locale === 'fa' ? 'font-vazir' : 'font-stacksans'} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
+            <Toaster position="top-center" toastOptions={{ className: 'bg-transparent border-0 shadow-none p-0' }} />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
