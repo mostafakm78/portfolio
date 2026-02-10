@@ -1,3 +1,6 @@
+import { JSX } from 'react';
+import { IconType } from 'react-icons/lib';
+
 export type SocialType = 'telegram' | 'github' | 'linkedin';
 
 export type StageProps = 'HomePage' | 'AboutMe' | 'Projects' | 'ContactMe';
@@ -25,4 +28,17 @@ export type MoreInfoProjectProps = {
 
 export type TechnologiesProps = {
   technologies: Tech[];
+};
+
+export type SocialAppDataProps = {
+  name: { fa: string; en: string };
+  logo: IconType;
+  link: string;
+};
+
+export type ContactDataProps = {
+  name: { fa: string; en: string };
+  link: string;
+  logo: JSX.Element;
+  text: string;
 };

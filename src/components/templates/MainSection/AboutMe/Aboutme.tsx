@@ -46,7 +46,7 @@ const AboutMe = () => {
   return (
     <section className={`relative z-20 w-full h-full flex ${locale === 'fa' ? '' : 'flex-row-reverse'} items-center justify-center gap-8`}>
       <div className="w-1/2 h-full flex flex-col items-center justify-between space-y-10">
-        <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-5xl font-bold`}>{t('aboutme')}</h2>
+        <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-4xl 3xl:text-5xl font-bold`}>{t('aboutme')}</h2>
         <p dir={locale === 'fa' ? 'rtl' : 'ltr'} className={`text-justify ${locale === 'fa' ? 'text-[16px]' : 'text-[14px]'} 3xl:text-lg`}>
           {t('aboutmefull')}
         </p>
@@ -62,7 +62,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="w-1/2 h-full flex flex-col items-center justify-between space-y-10">
-        <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-5xl font-bold`}>{t('skills')}</h2>
+        <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-4xl 3xl:text-5xl font-bold`}>{t('skills')}</h2>
         <div className="grid grid-cols-3 items-center mx-auto h-full gap-4 gap-y-12">
           {apps.map((app: App) => {
             return (
@@ -76,11 +76,6 @@ const AboutMe = () => {
             );
           })}
         </div>
-      </div>
-      <div className={`absolute ${locale === 'fa' ? 'left-0' : 'right-0'} -bottom-3 flex gap-2 items-center justify-center`}>
-        <SocialButton name="telegram" classname="text-xl" link="https://t.me/Mostafakamari78" />
-        <SocialButton name="github" classname="text-xl" link="https://github.com/mostafakm78" />
-        <SocialButton name="linkedin" classname="text-xl" link="http://linkedin.com/in/mostafa-kamari" />
       </div>
     </section>
   );

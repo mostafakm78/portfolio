@@ -2,11 +2,11 @@
 import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import LocaleToggle from '@/components/shared/LocaleSwitcher';
 import Menu from '@/components/shared/Menu';
-import HomePage from './HomePage';
-import AboutMe from './Aboutme';
+import HomePage from './HomePage/HomePage';
+import AboutMe from './AboutMe/Aboutme';
 import { useStage } from '@/components/Providers/StageProvider';
-import Projects from './ProjectsPage';
-import ContactMe from './Contactme';
+import Projects from './Projects/ProjectsPage';
+import ContactMe from './ContactMe/Contactme';
 import { StageProps } from '@/types/Types';
 import { JSX } from 'react';
 

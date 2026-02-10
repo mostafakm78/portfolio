@@ -10,9 +10,9 @@ const ProjectsPage = () => {
   const { lastIndex } = useStage();
 
   return (
-    <section className="relative z-20 w-full h-[80vh] flex flex-col items-center justify-center">
-      <div className="w-full h-22 flex flex-col items-start justify-start gap-2.5">
-        <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-5xl font-bold`}>{t('projects')}</h2>
+    <section className="relative z-20 w-full h-[80vh] flex flex-col items-center justify-between">
+      <div className="w-full h-20 flex flex-col items-start justify-start gap-2.5">
+        <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-4xl 3xl:text-5xl font-bold`}>{t('projects')}</h2>
         <p dir={locale === 'fa' ? 'rtl' : 'ltr'} className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-justify text-[16px] 3xl:text-lg`}>
           {t('desc')}
         </p>
