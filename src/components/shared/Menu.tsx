@@ -63,7 +63,7 @@ const Menu: React.FC = () => {
       value={stage as string}
       onValueChange={(v) => setStage(v as StageProps)}
       ref={ulRef}
-      className={`relative flex h-full lg:w-1/2 md:w-2/3 w-3/4 text-foreground dark:text-background items-center justify-around rounded-[30px] rounded-b-none bg-primary md:px-10 px-5 ${locale === 'fa' ? 'flex-row-reverse' : ''}`}
+      className={`relative flex h-full lg:w-1/2 md:w-2/3 w-4/5 text-foreground dark:text-background items-center justify-around rounded-[30px] rounded-b-none bg-primary md:px-10 px-2 ${locale === 'fa' ? 'flex-row-reverse' : ''}`}
     >
       {items.map((item, index) => (
         <div key={String(item.value)}>

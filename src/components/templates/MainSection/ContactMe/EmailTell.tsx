@@ -18,7 +18,7 @@ const EmailTell = () => {
     <>
       {ContactData.map((item: ContactDataProps, index: number) => {
         return (
-          <Link key={index} href={item.link} className={`flex ${locale === 'fa' ? 'bg-linear-240' : 'flex-row-reverse bg-linear-60'} items-center justify-between w-full  p-3 from-secondary via-background to-background rounded-[15px] text-xl inset-shadow-sm dark:inset-shadow-foreground/15 hover:via-secondary duration-300 transition-all hover:px-12`}>
+          <Link key={index} href={item.link} className={`flex ${locale === 'fa' ? 'bg-linear-240' : 'flex-row-reverse bg-linear-60'} items-center justify-between w-full  p-3 from-secondary via-background to-background rounded-[15px] md:text-xl text-sm inset-shadow-sm dark:inset-shadow-foreground/15 hover:via-secondary duration-300 transition-all hover:px-12`}>
             <span className="font-bold flex items-center gap-2">
               {item.logo}
               <span>{locale === 'fa' ? item.name.fa : item.name.en}</span>

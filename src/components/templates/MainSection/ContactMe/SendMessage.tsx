@@ -83,7 +83,7 @@ export function SendMessage() {
 
   return (
     <form dir={locale === 'fa' ? 'rtl' : 'ltr'} className="w-full h-full flex flex-col justify-around" id="sendms" onSubmit={form.handleSubmit(onSubmit)}>
-      <FieldGroup>
+      <FieldGroup className="space-y-4 mt-4 md:mt-0 md:space-y-0">
         <Controller
           name="name"
           control={form.control}

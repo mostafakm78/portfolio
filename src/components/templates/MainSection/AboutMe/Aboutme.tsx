@@ -50,20 +50,20 @@ const AboutMe = () => {
         <p dir={locale === 'fa' ? 'rtl' : 'ltr'} className={`text-justify ${locale === 'fa' ? 'text-[16px]' : 'text-[14px]'} 3xl:text-lg`}>
           {t('aboutmefull')}
         </p>
-        <div className="w-full flex items-center justify-between">
-          <GlowButton className="w-1/3">
+        <div className="w-full flex items-center justify-between gap-3 lg:gap-0">
+          <GlowButton className="w-1/2 md:w-1/3 md:text-lg text-base">
             <Link className="w-full h-full" href="/MostafaKamari-Resume.pdf" download>
               {t('download')}
             </Link>
           </GlowButton>
-          <GlowButton type="button" onClick={() => setStage('ContactMe')} className="w-1/3">
+          <GlowButton type="button" onClick={() => setStage('ContactMe')} className="w-1/2 md:w-1/3 md:text-lg text-base">
             {t('contact')}
           </GlowButton>
         </div>
       </div>
       <div className="lg:w-1/2 w-full h-full flex flex-col items-center justify-between space-y-10">
         <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-4xl 3xl:text-5xl font-bold`}>{t('skills')}</h2>
-        <div className="grid lg:grid-cols-3 md:grid-cols-4 grid-cols-2 items-center mx-auto h-full gap-4 gap-y-12">
+        <div className="grid md:mt-0 mt-6 lg:grid-cols-3 md:grid-cols-4 grid-cols-2 items-center mx-auto h-full gap-4 gap-y-12">
           {apps.map((app: App) => {
             return (
               <div className="relative" key={app.key}>

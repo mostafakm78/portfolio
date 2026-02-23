@@ -39,9 +39,9 @@ const SocialApp = () => {
     <div className="flex flex-wrap w-full items-center justify-between">
       {SocialAppData.map((item: SocialAppDataProps, index: number) => {
         return (
-          <Link key={index} href={item.link} target="_blank" className="relative group w-20 flex flex-col items-center gap-1">
-            <item.logo className="relative text-foreground dark:text-background bg-muted w-14 h-14 p-2 rounded-[15px] z-10" />
-            <div className="z-5 absolute w-14 h-14 rounded-[15px] bg-foreground/50 -top-2 left-6 rotate-12 group-hover:rotate-0 group-hover:left-1/2 group-hover:top-0 group-hover:-translate-x-1/2 group-hover:w-12 group-hover:h-12 duration-300" />
+          <Link key={index} href={item.link} target="_blank" className="relative group md:w-20 w-15 flex flex-col items-center gap-1">
+            <item.logo className="relative text-foreground dark:text-background bg-muted w-10 h-10 md:w-14 md:h-14 p-2 rounded-[15px] z-10" />
+            <div className="z-5 absolute w-10 h-10 md:w-14 md:h-14 rounded-[15px] bg-foreground/50 -top-2 left-6 rotate-12 group-hover:rotate-0 group-hover:left-1/2 group-hover:top-0 group-hover:-translate-x-1/2 group-hover:w-12 group-hover:h-12 duration-300" />
             <span className="inline-block text-base opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 duration-300">{locale === 'fa' ? item.name.fa : item.name.en}</span>
           </Link>
         );
