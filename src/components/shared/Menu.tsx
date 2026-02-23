@@ -63,7 +63,7 @@ const Menu: React.FC = () => {
       value={stage as string}
       onValueChange={(v) => setStage(v as StageProps)}
       ref={ulRef}
-      className={`relative flex h-full w-1/2 text-foreground dark:text-background items-center justify-around rounded-[30px] rounded-b-none bg-primary px-10 ${locale === 'fa' ? 'flex-row-reverse' : ''}`}
+      className={`relative flex h-full lg:w-1/2 md:w-2/3 w-3/4 text-foreground dark:text-background items-center justify-around rounded-[30px] rounded-b-none bg-primary md:px-10 px-5 ${locale === 'fa' ? 'flex-row-reverse' : ''}`}
     >
       {items.map((item, index) => (
         <div key={String(item.value)}>
@@ -73,14 +73,14 @@ const Menu: React.FC = () => {
               itemRefs.current[index] = el;
             }}
             htmlFor={`menu-${String(item.value)}`}
-            className={`cursor-pointer py-2 hover:opacity-80 duration-300 text-lg ${locale === 'fa' ? 'font-bold' : 'font-medium'}`}
+            className={`cursor-pointer py-2 hover:opacity-80 duration-300 md:text-lg  ${locale === 'fa' ? 'font-bold text-sm' : 'font-medium text-[12px]'}`}
           >
             {locale === 'fa' ? item.labelFa : item.labelEn}
           </Label>
         </div>
       ))}
 
-      <div ref={lineRef} className="absolute bottom-0.5 h-1 bg-foreground dark:bg-background transition-all duration-300" />
+      <div ref={lineRef} className="absolute bottom-0.5 md:h-1 h-0.5 bg-foreground dark:bg-background transition-all duration-300" />
     </RadioGroup>
   );
 };

@@ -26,10 +26,10 @@
     "contactone": "If you have any collaboration proposals, I’d be happy to hear them! I’d love to talk about your ideas, projects, and front-end needs. If you’re looking to build a fast, modern, and visually appealing website — or need someone to bring your designs and ideas to life — I’m here!",
     "contacttwo": "Contact me — let’s create something together that’s truly worth seeing.",
     "social": "Social Media",
-    "sendms" : "Send Message",
-    "name" : "Full Name",
-    "email" : "Your Email",
-    "description" : "Your Message",
+    "sendms": "Send Message",
+    "name": "Full Name",
+    "email": "Your Email",
+    "description": "Your Message",
     "character": "characters",
     "send": "Send",
     "sending": "Sending...",
@@ -48,9 +48,10 @@
     "notopen": "You haven’t opened the project yet",
     "about": "About the Project",
     "techs": "Libraries & Technologies",
-    "chall": "Challenges"
+    "chall": "Challenges",
+    "info": "Project Information"
   },
-  "NotFound" : {
+  "NotFound": {
     "title": "Page Not Found",
     "message": "Sorry, the page you are looking for does not exist.",
     "home": "Go to Home"

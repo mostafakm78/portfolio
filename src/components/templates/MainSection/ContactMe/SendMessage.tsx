@@ -188,7 +188,7 @@ export function SendMessage() {
           }}
         />
       </FieldGroup>
-      <Button disabled={!isValid} type="submit" className="w-full py-5.5 text-foreground rounded-[15px] bg-primary hover:bg-primary/80 shadow-none dark:text-background">
+      <Button disabled={!isValid} type="submit" className="w-full lg:mt-0 mt-4 py-5.5 text-foreground rounded-[15px] bg-primary hover:bg-primary/80 shadow-none dark:text-background">
         {isSubmitting ? (
           <div className="flex items-center justify-center gap-2 w-full h-full">
             <Spinner />

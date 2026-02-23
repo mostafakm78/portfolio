@@ -44,8 +44,8 @@ const AboutMe = () => {
   const locale = useLocale();
 
   return (
-    <section className={`relative z-20 w-full h-full flex ${locale === 'fa' ? '' : 'flex-row-reverse'} items-center justify-center gap-8`}>
-      <div className="w-1/2 h-full flex flex-col items-center justify-between space-y-10">
+    <section className={`relative z-20 w-full h-full flex lg:flex-row flex-col ${locale === 'fa' ? '' : 'lg:flex-row-reverse'} items-center justify-center gap-8`}>
+      <div className="lg:w-1/2 w-full h-full flex flex-col items-center justify-between space-y-10">
         <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-4xl 3xl:text-5xl font-bold`}>{t('aboutme')}</h2>
         <p dir={locale === 'fa' ? 'rtl' : 'ltr'} className={`text-justify ${locale === 'fa' ? 'text-[16px]' : 'text-[14px]'} 3xl:text-lg`}>
           {t('aboutmefull')}
@@ -61,9 +61,9 @@ const AboutMe = () => {
           </GlowButton>
         </div>
       </div>
-      <div className="w-1/2 h-full flex flex-col items-center justify-between space-y-10">
+      <div className="lg:w-1/2 w-full h-full flex flex-col items-center justify-between space-y-10">
         <h2 className={`${locale === 'fa' ? 'ml-auto' : 'mr-auto'} text-4xl 3xl:text-5xl font-bold`}>{t('skills')}</h2>
-        <div className="grid grid-cols-3 items-center mx-auto h-full gap-4 gap-y-12">
+        <div className="grid lg:grid-cols-3 md:grid-cols-4 grid-cols-2 items-center mx-auto h-full gap-4 gap-y-12">
           {apps.map((app: App) => {
             return (
               <div className="relative" key={app.key}>

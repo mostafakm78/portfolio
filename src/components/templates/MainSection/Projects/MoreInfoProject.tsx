@@ -11,7 +11,7 @@ const MoreInfoProject = ({ ...props }: MoreInfoProjectProps) => {
   const t = useTranslations('Projects');
   const locale = useLocale();
 
-  const container = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

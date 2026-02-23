@@ -23,7 +23,7 @@ export default function MainSection() {
   const content = screens[stage] ?? <HomePage />;
 
   return (
-    <section className="h-screen p-4 flex flex-col">
+    <section className="lg:h-screen p-4 flex flex-col">
       <section className="h-13 shrink-0 flex items-center justify-between">
         <Menu />
         <div className="ml-4 flex items-center gap-2">

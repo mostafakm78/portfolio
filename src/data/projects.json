@@ -45,8 +45,8 @@
         "/images/projects/SetCoffee/12-SetCoffee.png"
       ],
       "desc": {
-        "fa": "ست کافی اولین پروژه متوسط رو به بزرگی بود که در طول دوره پیاده‌سازی و به‌صورت لایو منتشر کردم. این پروژه باعث درک بهتر مفاهیم SSG، SSR، Page Router و App Router در Next.js شد و با پیاده‌سازی پنل کاربری، پنل مدیریت و نمایش محصولات، تجربه عملی ارزشمندی از کار با Next.js و React به من داد.",
-        "en": "Set Coffee was the first medium-to-large scale project I completed during a course and successfully deployed live. This project helped me gain a deeper understanding of SSG, SSR, Pages Router, and App Router in Next.js, and provided valuable hands-on experience with Next.js and React through building admin and user panels and dynamic product displays."
+        "fa": "ست کافی یک پروژه متوسط رو به بزرگ و اولین تجربه انتشار لایو من بود که با پیاده‌سازی پنل کاربری و مدیریت، درک عمیق‌تری از SSG، SSR و روتینگ در Next.js به من داد.",
+        "en": "Set Coffee was my first medium-to-large live project, helping me better understand SSG, SSR, and routing in Next.js through building admin and user panels and product pages."
       },
       "techs": [
         { "name": "React", "logo": "/images/react-js-icon.png" },
@@ -70,8 +70,8 @@
       "link": "https://zoodfix.vercel.app/",
       "photos": ["/images/projects/Zoodfix/1-Zoodfix.png", "/images/projects/Zoodfix/2-Zoodfix.png", "/images/projects/Zoodfix/3-Zoodfix.png", "/images/projects/Zoodfix/4-Zoodfix.png", "/images/projects/Zoodfix/5-Zoodfix.png"],
       "desc": {
-        "fa": "زودفیکس یک وب‌سایت بازطراحی‌شده با تمرکز روی پیاده‌سازی دقیق UI بر اساس یک نمونه واقعی است. در این پروژه اعتبارسنجی فرم‌ها به‌صورت دستی و بدون استفاده از کتابخانه‌های validation انجام شده تا درک عمیق‌تری از منطق validation به‌دست بیاید. ارتباط با بک‌اند ساختگی با استفاده از APIهای شبیه‌سازی‌شده (JSONPlaceholder) پیاده‌سازی شده است. همچنین دسته‌بندی و نمایش محصولات مختلف به‌صورت داینامیک انجام شده است. این پروژه تمرین عملی مناسبی برای درک UI، منطق فرم‌ها و کار با داده‌های API بود.",
-        "en": "Zoodfix is a redesigned website focused on accurate UI implementation, featuring manual form validation, dynamic product categorization, and integration with a mock backend API, providing practical experience with UI design and API-driven data."
+        "fa": "زودفیکس یک وب‌سایت بازطراحی‌شده با تمرکز بر پیاده‌سازی دقیق UI است که شامل اعتبارسنجی دستی فرم‌ها و اتصال به API شبیه‌سازی‌شده برای نمایش داینامیک محصولات می‌باشد.",
+        "en": "Zoodfix is a redesigned website focused on precise UI implementation, featuring manual form validation and integration with a mock API for dynamic product display."
       },
       "techs": [
         { "name": "React", "logo": "/images/react-js-icon.png" },
@@ -108,8 +108,8 @@
         "/images/projects/SoftSound/11-SoftSound.png"
       ],
       "desc": {
-        "fa": "صدای آرام یک وب‌اپلیکیشن برای پخش صداهای آرامش‌بخش است که امکان پخش همزمان چند صدا را فراهم می‌کند. کاربران می‌توانند با انتخاب صداهای دلخواه، پلی‌لیست شخصی بسازند و از تایمر با حالت‌های مختلف برای مدیریت زمان استفاده کنند. چالش اصلی این پروژه مدیریت همزمان صداها و state آن‌ها با استفاده از Redux بوده است. همچنین ذخیره و بازیابی پلی‌لیست کاربر با استفاده از Local Storage پیاده‌سازی شده است. این پروژه تجربه عملی ارزشمندی در مدیریت state پیچیده و تعامل با APIهای مرورگر به من داد.",
-        "en": "Soft Sound is a web application for playing relaxing sounds with simultaneous playback, personalized playlists, and a timer, built with Redux for complex state management and Local Storage for saving user data, providing hands-on experience with browser APIs."
+        "fa": "صدای آرام یک وب‌اپلیکیشن پخش صداهای آرامش‌بخش با امکان پخش همزمان، ساخت پلی‌لیست شخصی و تایمر است که با Redux برای مدیریت state و Local Storage برای ذخیره داده‌ها پیاده‌سازی شده است.",
+        "en": "Soft Sound is a web app for playing relaxing sounds with simultaneous playback, custom playlists, and a timer, built using Redux for state management and Local Storage for saving user data."
       },
       "techs": [
         { "name": "React", "logo": "/images/react-js-icon.png" },
@@ -144,8 +144,8 @@
         "/images/projects/Capsule/8-Capsule.png"
       ],
       "desc": {
-        "fa": "کپسول یک وب‌اپلیکیشن Front-End برای ذخیره و مدیریت خاطره‌های دیجیتال است که شامل سیستم احراز هویت و داشبوردهای مجزای admin و user می‌باشد. این پروژه با RESTful API ارتباط کامل دارد و تمرکز آن روی fetch داده‌ها، مدیریت state و کنترل دسترسی کاربران بوده است. از چالش‌های اصلی می‌توان به تفکیک نقش‌ها و هماهنگی UI با داده‌های دریافتی از API اشاره کرد. این پروژه تجربه عملی ارزشمندی از کار با معماری Front-End و سناریوهای واقعی محصول به من داد.",
-        "en": "Capsule is a front-end web application for storing and managing digital memories, featuring authentication, separate admin and user dashboards, and full integration with a RESTful API. It focuses on data fetching, state management, and access control, and provided valuable hands-on experience in front-end architecture and real-world product scenarios."
+        "fa": "کپسول یک وب‌اپلیکیشن فرانت‌اند برای مدیریت خاطره‌های دیجیتال با احراز هویت و داشبوردهای جداگانه ادمین و کاربر است که به RESTful API متصل بوده و بر مدیریت داده، state و سطح دسترسی تمرکز دارد.",
+        "en": "Capsule is a front-end web app for managing digital memories, featuring authentication, separate admin and user dashboards, and RESTful API integration, focused on data handling, state management, and access control."
       },
       "techs": [
         { "name": "React", "logo": "/images/react-js-icon.png" },
