@@ -8,24 +8,22 @@ My personal portfolio website built with Next.js 14, showcasing production proje
 
 ## 📁 Screenshots
 
-> _(Add 2–3 screenshots here: hero section, projects page, mobile view)_
->
 > Example:
 > | 🏠 Hero | 📂 Projects |
 > |---|---|
-> | ![Hero](./screenshots/hero.png) | ![Projects](./screenshots/projects.png) |
+> | ![Hero](./1.png) | ![Projects](./2.png) |
 
 ---
 
 ## 🧠 Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | Next.js 14 (App Router) |
-| Language | TypeScript |
-| Styling | Tailwind CSS + shadcn/ui |
-| Animations | GSAP |
-| Deployment | Vercel |
+| Layer      | Technology               |
+| ---------- | ------------------------ |
+| Framework  | Next.js 14 (App Router)  |
+| Language   | TypeScript               |
+| Styling    | Tailwind CSS + shadcn/ui |
+| Animations | GSAP                     |
+| Deployment | Vercel                   |
 
 ---
 
@@ -78,6 +76,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## 🚀 Roadmap
 
 ### ✅ Shipped
+
 - [x] Bilingual support (Persian / English)
 - [x] GSAP scroll animations
 - [x] Projects showcase with live demo links
@@ -85,6 +84,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - [x] Fully responsive design
 
 ### 🔜 Upcoming
+
 - [ ] Blog section for dev articles
 - [ ] Dark / light mode toggle
 - [ ] Contact form with email integration
