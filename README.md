@@ -1,63 +1,104 @@
-# 🧑‍💻 Mostafa Kamari's Portfolio
+# 🧑‍💻 Mostafa Kamari — Personal Portfolio
 
-This is my personal portfolio website, built with [Next.js](https://nextjs.org), showcasing my front-end projects, skills, and experiences.
+My personal portfolio website built with Next.js 14, showcasing production projects, technical skills, and work experience.
 
-> ✅ Live Site: [portfolio-immostafakamari.vercel.app](https://portfolio-immostafakamari.vercel.app/)
-
----
-
-## 🚀 Tech Stack
-
-- [Next.js](https://nextjs.org)
-- [React](https://reactjs.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com)
-- [SdadCn](https://ui.shadcn.com/)
+🔗 [Visit Site](https://portfolio-immostafakamari.vercel.app)
 
 ---
 
-## 📦 Getting Started
+## 📁 Screenshots
 
-To run the project locally:
+> _(Add 2–3 screenshots here: hero section, projects page, mobile view)_
+>
+> Example:
+> | 🏠 Hero | 📂 Projects |
+> |---|---|
+> | ![Hero](./screenshots/hero.png) | ![Projects](./screenshots/projects.png) |
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-npm install
-npm run dev
-```
+---
 
-Then open your browser and go to: http://localhost:3000
-Start editing the main page at src/app/page.tsx.
+## 🧠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS + shadcn/ui |
+| Animations | GSAP |
+| Deployment | Vercel |
+
+---
+
+## ⚡ Technical Highlights
+
+- **Performance**: Lighthouse 90+ via Next.js Image optimization, font subsetting, and route-based code splitting
+- **Animations**: GSAP-powered scroll and entrance animations for a smooth, non-jarring experience
+- **Bilingual**: Supports Persian (fa) and English (en) routing
+- **SEO**: Semantic HTML, Open Graph meta tags, and next-sitemap for full crawlability
+- **Type-safe**: Strict TypeScript throughout — no `any`, no shortcuts
+- **Responsive**: Mobile-first layout, fully functional from 320px to 1440px
+
+---
 
 ## 📁 Project Structure
 
-.
+```
+src/
+├── app/
+│   ├── [locale]/        # Bilingual routing (fa / en)
+│   ├── components/      # Reusable UI components
+│   └── layout.tsx       # Root layout with metadata
+├── data/                # Projects and skills data (JSON)
+├── lib/                 # Utility functions
+└── public/              # Static assets
+```
 
-├── src/app/ # Next.js app directory
-│ └── page.tsx # Main homepage
-├── components/ # Reusable components
-├── public/ # Static files (images, etc.)
-├── data/ # Data json file
-├── tailwind.config.ts # Tailwind configuration
-├── tsconfig.json # TypeScript configuration
+---
 
-## 🧠 Features
-⚡ Fast, responsive, and mobile-friendly UI
-🧩 Built with reusable components
-🛠️ Type-safe codebase with TypeScript
-🌐 Deployed on Vercel
+## ⚙️ Setup & Run Locally
 
-## 🛠️ Deployment
-This project is deployed on Vercel.
-To deploy your own version:
-Push your project to GitHub
-Connect your repo to Vercel
-Choose the root directory and deploy
+```bash
+# Clone the repository
+git clone https://github.com/mostafakm78/portfolio-immostafakamari.git
 
-## 🙋‍♂️ About Me
-I’m a passionate front-end developer interested in building clean, user-friendly, and high-performance web applications.
-📫 Reach me at: LinkedIn (if available)
-📁 Portfolio: portfolio-immostafakamari.vercel.app
+# Navigate to project directory
+cd portfolio-immostafakamari
 
-If you like this project, feel free to star the repository and share it with others!
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🚀 Roadmap
+
+### ✅ Shipped
+- [x] Bilingual support (Persian / English)
+- [x] GSAP scroll animations
+- [x] Projects showcase with live demo links
+- [x] Lighthouse 90+ performance score
+- [x] Fully responsive design
+
+### 🔜 Upcoming
+- [ ] Blog section for dev articles
+- [ ] Dark / light mode toggle
+- [ ] Contact form with email integration
+
+---
+
+## 📜 License
+
+This project is open-source under the [MIT License](LICENSE).
+
+---
+
+## 🧑‍💻 Author
+
+**Mostafa Kamari** — Frontend Developer · React & Next.js
+
+[GitHub](https://github.com/mostafakm78) · [LinkedIn](https://linkedin.com/in/mostafa-kamari) · [Portfolio](https://portfolio-immostafakamari.vercel.app)
