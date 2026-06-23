@@ -11,7 +11,7 @@ My personal portfolio website built with Next.js 14, showcasing production proje
 > Example:
 > | 🏠 Hero | 📂 Projects |
 > |---|---|
-> | ![Hero](./1.png) | ![Projects](./2.png) |
+> | ![Hero](./Screenshots/1.png) | ![Projects](./Screenshots/2.png) |
 
 ---
 
